@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Firstflight Travels</title>
+    <title>Pesona Wisata</title>
     <link rel="icon" href="./files/Logo.png">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,11 +29,11 @@
             
             <ul class="navbar">
                 <li>
-                    <a href="#home">Home</a>
-                    <a href="#locations">Locations</a>
-                    <a href="#package">Packages</a>
-                    <a href="./about.html">About Us</a>
-                    <a href="./about.html">Contact Us</a>
+                <a href="#home">Beranda</a>
+                <a href="#locations">Destinasi</a>
+                <a href="#package">Packages</a>
+                <a href="./about.php">About Us</a>
+                <a href="./login.php">Login</a>
                 </li>
             </ul>
         </nav>
@@ -41,9 +41,9 @@
         <div class="title">
             <h1>PESONA WISATA</h1>
             <p>Plan your trip with us and travel around the world with the most affordable packages!</p>
-            <a href="./register.html" class="button">Register Now!</a>
+            <a href="./register.php" class="button">Register Now!</a>
         </div>
-        </div>
+    </div>
     </div>
 
 <!-- Services -->
@@ -100,7 +100,7 @@
 
     <div class="location-content">
         
-        <a href="./locations.html#kashmir" target="_blank"><div class="col-content">
+        <a href="./locations.php#kashmir" target="_blank"><div class="col-content">
             <img src="./files/l1.jpg" alt="">
             <h5>India</h5>
             <p>Kashmir</p>
@@ -108,43 +108,43 @@
 
        
 
-        <a href="./locations.html#istanbul" target="_blank"><div class="col-content">
+        <a href="./locations.php#istanbul" target="_blank"><div class="col-content">
             <img src="./files/l2.jpg" alt="">
             <h5>Turkey</h5>
             <p>Istanbul</p>
         </div></a>
 
-        <a href="./locations.html#paris" target="_blank"><div class="col-content">
+        <a href="./locations.php#paris" target="_blank"><div class="col-content">
             <img src="./files/l3.jpg" alt="">
             <h5>France</h5>
             <p>Paris</p>
         </div></a>
 
-        <a href="./locations.html#bali" target="_blank"><div class="col-content">
+        <a href="./locations.php#bali" target="_blank"><div class="col-content">
             <img src="./files/l4.jpg" alt="">
             <h5>Indonesia</h5>
             <p>Bali</p>
         </div></a>
 
-        <a href="./locations.html#dubai" target="_blank"><div class="col-content">
+        <a href="./locations.php#dubai" target="_blank"><div class="col-content">
             <img src="./files/l5.jpg" alt="">
             <h5>United Arab Emirates</h5>
             <p>Dubai</p>
         </div></a>
 
-        <a href="./locations.html#geneva" target="_blank"><div class="col-content">
+        <a href="./locations.php#geneva" target="_blank"><div class="col-content">
             <img src="./files/l6.jpg" alt="">
             <h5>Switzerland</h5>
             <p>Geneva</p>
         </div></a>
 
-        <a href="./locations.html#port-blair" target="_blank"><div class="col-content">
+        <a href="./locations.php#port-blair" target="_blank"><div class="col-content">
             <img src="./files/l7.jpg" alt="">
             <h5>Andaman & Nicobar</h5>
             <p>Port Blair</p>
         </div></a>
 
-        <a href="./locations.html#rome" target="_blank"><div class="col-content">
+        <a href="./locations.php#rome" target="_blank"><div class="col-content">
             <img src="./files/l8.jpg" alt="">
             <h5>Italy</h5>
             <p>Rome</p>
@@ -275,9 +275,9 @@
             <div class="footlinks">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="./register.html">Register</a></li>
-                    <li><a href="./about.html">About Us</a></li>
-                    <li><a href="./contact.html">Contact Us</a></li>
+                    <li><a href="./register.php">Register</a></li>
+                    <li><a href="./about.php">About Us</a></li>
+                    <li><a href="./contact.php">Contact Us</a></li>
                 </ul>
             </div>
 

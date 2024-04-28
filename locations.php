@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Destinations</title>
-    <link rel="icon" href="./files/logo.png">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Pesona Wisata</title>
+    <link rel="icon" href="./files/Logo.png">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -19,11 +19,11 @@
 
         <ul class="navbar">
             <li>
-                <a href="./index.html">Home</a>
-                <a href="./index.html#locations">Locations</a>
-                <a href="./index.html#package">Packages</a>
-                <a href="./about.html">About Us</a>
-                <a href="./contact.html">Contact Us</a>
+                <a href="./index.php">Beranda</a>
+                <a href="./index.php#locations">Destinasi</a>
+                <a href="./index.php#package">Packages</a>
+                <a href="./about.php">About Us</a>
+                <a href="./login.php">Login</a>
             </li>
         </ul>
     </nav>
@@ -158,9 +158,9 @@
             <div class="footlinks">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="./register.html">Register</a></li>
-                    <li><a href="./about.html">About Us</a></li>
-                    <li><a href="./contact.html">Contact Us</a></li>
+                    <li><a href="./register.php">Register</a></li>
+                    <li><a href="./about.php">About Us</a></li>
+                    <li><a href="./contact.php">Contact Us</a></li>
                 </ul>
             </div>
 
