@@ -778,6 +778,8 @@ body1 {
     color: #ffffff;
     pointer-events: none;
     transition: 0.4s;
+    background-color: transparent;
+    border-radius: 10px;
 }
 .inputbox input:valid ~ span,
 .inputbox input:focus ~ span {
@@ -787,8 +789,6 @@ body1 {
     padding: 0 10px;
     background-color: white;
     border-radius: 10px;
-    border-left: 1px solid #ffffff;
-    border-right: 1px solid #ffffff;
 }
 .inputbox input:valid,
 .inputbox input:focus {
