@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pesona Wisata</title>
-    <link rel="icon" href="./files/Logo.png">
+    <link rel="icon" href="./asset/Logo.png">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,13 +19,13 @@
 <!-- Background Video & Header -->
 
     <div class="banner">
-        <video src="./files/bgvid.mp4" type="video/mp4" autoplay muted loop></video>
+        <video src="./asset/bgvid.mp4" type="video/mp4" autoplay muted loop></video>
     
     <!-- Header -->
 
     <div class="content" id="home"> 
         <nav>
-            <img src="./files/Logo.png" class="logo" alt="Logo" title="FirstFlight Travels">
+            <img src="./asset/Logo.png" class="logo" alt="Logo" title="FirstFlight Travels">
             
             <ul class="navbar">
                 <li>
@@ -55,7 +55,7 @@
     <div class="rowitems">
         <div class="container-box">
         <div class="container-image">
-           <img src="./files/1a.jpg" alt="Flight Services">
+           <img src="./asset/1a.jpg" alt="Flight Services">
         </div>
             <h4>Flight Services</h4>
             <p>Arrival and Departure</p>
@@ -63,7 +63,7 @@
     
         <div class="container-box">
         <div class="container-image">
-           <img src="./files/2a.jpg" alt="Food Services">
+           <img src="./asset/2a.jpg" alt="Food Services">
         </div>
             <h4>Food Services</h4>
             <p>Catering</p>
@@ -71,7 +71,7 @@
 
         <div class="container-box">
         <div class="container-image">
-            <img src="./files/3a.jpg" alt="Travel Services">
+            <img src="./asset/3a.jpg" alt="Travel Services">
         </div>
             <h4>Travel Services</h4>
             <p>Pick-up/drop</p>
@@ -79,7 +79,7 @@
 
         <div class="container-box">
         <div class="container-image">
-            <img src="./files/4a.jpg" alt="Hotel Services">
+            <img src="./asset/4a.jpg" alt="Hotel Services">
         </div>
             <h4>Hotel Services</h4>
             <p>Check-in/out</p>
@@ -101,7 +101,7 @@
     <div class="location-content">
         
         <a href="./locations.php#kashmir" target="_blank"><div class="col-content">
-            <img src="./files/l1.jpg" alt="">
+            <img src="./asset/l1.jpg" alt="">
             <h5>India</h5>
             <p>Kashmir</p>
         </div></a>
@@ -109,43 +109,43 @@
        
 
         <a href="./locations.php#istanbul" target="_blank"><div class="col-content">
-            <img src="./files/l2.jpg" alt="">
+            <img src="./asset/l2.jpg" alt="">
             <h5>Turkey</h5>
             <p>Istanbul</p>
         </div></a>
 
         <a href="./locations.php#paris" target="_blank"><div class="col-content">
-            <img src="./files/l3.jpg" alt="">
+            <img src="./asset/l3.jpg" alt="">
             <h5>France</h5>
             <p>Paris</p>
         </div></a>
 
         <a href="./locations.php#bali" target="_blank"><div class="col-content">
-            <img src="./files/l4.jpg" alt="">
+            <img src="./asset/l4.jpg" alt="">
             <h5>Indonesia</h5>
             <p>Bali</p>
         </div></a>
 
         <a href="./locations.php#dubai" target="_blank"><div class="col-content">
-            <img src="./files/l5.jpg" alt="">
+            <img src="./asset/l5.jpg" alt="">
             <h5>United Arab Emirates</h5>
             <p>Dubai</p>
         </div></a>
 
         <a href="./locations.php#geneva" target="_blank"><div class="col-content">
-            <img src="./files/l6.jpg" alt="">
+            <img src="./asset/l6.jpg" alt="">
             <h5>Switzerland</h5>
             <p>Geneva</p>
         </div></a>
 
         <a href="./locations.php#port-blair" target="_blank"><div class="col-content">
-            <img src="./files/l7.jpg" alt="">
+            <img src="./asset/l7.jpg" alt="">
             <h5>Andaman & Nicobar</h5>
             <p>Port Blair</p>
         </div></a>
 
         <a href="./locations.php#rome" target="_blank"><div class="col-content">
-            <img src="./files/l8.jpg" alt="">
+            <img src="./asset/l8.jpg" alt="">
             <h5>Italy</h5>
             <p>Rome</p>
         </div></a>
@@ -164,7 +164,7 @@
         
         <div class="box">
             <div class="image">
-                <img src="./files/p1.jpg" alt="">
+                <img src="./asset/p1.jpg" alt="">
                 <h3>Rs.9,999/-</h3>
             </div>
         
@@ -184,7 +184,7 @@
         
         <div class="box">
             <div class="image">
-                <img src="./files/p2.jpg" alt="">
+                <img src="./asset/p2.jpg" alt="">
                 <h3>Rs.19,999/-</h3>
             </div>
         
@@ -204,7 +204,7 @@
 
         <div class="box">
             <div class="image">
-                <img src="./files/p3.jpg" alt="">
+                <img src="./asset/p3.jpg" alt="">
                 <h3>Rs.29,999/-</h3>
             </div>
         
@@ -225,7 +225,7 @@
 
         <div class="box">
             <div class="image">
-                <img src="./files/p4.jpg" alt="">
+                <img src="./asset/p4.jpg" alt="">
                 <h3>Rs.39,999/-</h3>
             </div>
         
@@ -298,7 +298,7 @@
     </div>
 
     <div class="end">
-        <p>Copyright © 2022 Firstflight Travels All Rights Reserved.<br>Website developed by: Mohd. Rahil</p>
+        <p>Copyright © 2024 Pesona Wisata All Rights Reserved.<br>Website developed by: Group 4</p>
     </div>
 </section>
 

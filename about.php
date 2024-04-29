@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
-    <link rel="icon" href="./files/logo.png">
+    <link rel="icon" href="./asset/logo.png">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
 </head>
 <body class="aboutbody">
         <nav>
-            <img src="./files/logo.png" class="logo" alt="Logo" title="FirstFlight Travels">
+            <img src="./asset/logo.png" class="logo" alt="Logo" title="FirstFlight Travels">
 
             <ul class="navbar">
                 <li>
@@ -31,10 +31,70 @@
         
     <section class="about">
            <div class="main">
-            <img src="./files/aboutpic.png" alt="My Photo">
+            <img src="./asset/aboutpic.png" alt="My Photo">
             <div class="abt-text">
-                <h1>About <span>Us</span></h1>
-                <p>Firstflight Travels is a travel website project developed by Mohd. Rahil using HTML, CSS and JavaScript.</p>
+                <h1>About <span>Me</span></h1>
+                <p>Pesona Wisata is a travel website project developed by Group 4 using HTML, CSS and JavaScript.</p>
+                <a href="https://www.linkedin.com/in/mohdrahil101" class="connectbtn" target="_blank">Connect with me!</a>
+
+                <div class="connect-section">
+
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/mohd.rahil.blogger" target="_blank"><i class='bx bxl-facebook'></i></a>
+                        <a href="https://www.instagram.com/mohdrahil101" target="_blank"><i class='bx bxl-instagram' ></i></a>
+                        <a href="https://www.twitter.com/mohdrahil101" target="_blank"><i class='bx bxl-twitter' ></i></a>
+                        <a href="https://www.linkedin.com/in/mohdrahil101" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+                        <a href="https://www.youtube.com/techdollarz" target="_blank"><i class='bx bxl-youtube' ></i></a>
+                        <a href="https://www.mohdrahil.wordpress.com" target="_blank"><i class='bx bxl-wordpress' ></i></a>
+                        <a href="https://www.github.com/mohdrahil101" target="_blank"><i class='bx bxl-github'></i></a>
+                        <a href="https://www.amazon.in/shop/mohdrahil101" target="_blank"><i class='bx bxl-amazon'></i></a>
+                    </div>
+
+                </div>
+            </div>
+            
+
+           </div>
+           
+
+    </section>
+
+    <section class="about">
+           <div class="main">
+            <img src="./asset/aboutpic.png" alt="My Photo">
+            <div class="abt-text">
+                <h1>About <span>Me</span></h1>
+                <p>Pesona Wisata is a travel website project developed by Group 4 using HTML, CSS and JavaScript.</p>
+                <a href="https://www.linkedin.com/in/mohdrahil101" class="connectbtn" target="_blank">Connect with me!</a>
+
+                <div class="connect-section">
+
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/mohd.rahil.blogger" target="_blank"><i class='bx bxl-facebook'></i></a>
+                        <a href="https://www.instagram.com/mohdrahil101" target="_blank"><i class='bx bxl-instagram' ></i></a>
+                        <a href="https://www.twitter.com/mohdrahil101" target="_blank"><i class='bx bxl-twitter' ></i></a>
+                        <a href="https://www.linkedin.com/in/mohdrahil101" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+                        <a href="https://www.youtube.com/techdollarz" target="_blank"><i class='bx bxl-youtube' ></i></a>
+                        <a href="https://www.mohdrahil.wordpress.com" target="_blank"><i class='bx bxl-wordpress' ></i></a>
+                        <a href="https://www.github.com/mohdrahil101" target="_blank"><i class='bx bxl-github'></i></a>
+                        <a href="https://www.amazon.in/shop/mohdrahil101" target="_blank"><i class='bx bxl-amazon'></i></a>
+                    </div>
+
+                </div>
+            </div>
+            
+
+           </div>
+           
+
+    </section>
+
+    <section class="about">
+           <div class="main">
+            <img src="./asset/aboutpic.png" alt="My Photo">
+            <div class="abt-text">
+                <h1>About <span>Me</span></h1>
+                <p>Pesona Wisata is a travel website project developed by Group 4 using HTML, CSS and JavaScript.</p>
                 <a href="https://www.linkedin.com/in/mohdrahil101" class="connectbtn" target="_blank">Connect with me!</a>
 
                 <div class="connect-section">

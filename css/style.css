@@ -461,11 +461,12 @@ nav ul li a{
 
 .aboutbody{
     background-color: #191919;
+    
 }
 
 .about{
     width: 100%;
-    padding: 78px 0px;
+    padding: 1px 0px;
 }
 
 .about img{
