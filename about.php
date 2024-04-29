@@ -31,7 +31,7 @@
         
     <section class="about">
            <div class="main">
-            <img src="./asset/aboutpic.png" alt="My Photo">
+            <img src="./asset/Bayu.png" alt="My Photo">
             <div class="abt-text">
                 <h1>About <span>Me</span></h1>
                 <p>Pesona Wisata is a travel website project developed by Group 4 using HTML, CSS and JavaScript.</p>
@@ -52,16 +52,12 @@
 
                 </div>
             </div>
-            
-
-           </div>
-           
-
+        </div>
     </section>
 
     <section class="about">
            <div class="main">
-            <img src="./asset/aboutpic.png" alt="My Photo">
+            <img src="./asset/Vishnu.png" alt="My Photo">
             <div class="abt-text">
                 <h1>About <span>Me</span></h1>
                 <p>Pesona Wisata is a travel website project developed by Group 4 using HTML, CSS and JavaScript.</p>
@@ -82,16 +78,12 @@
 
                 </div>
             </div>
-            
-
-           </div>
-           
-
+        </div>
     </section>
 
     <section class="about">
            <div class="main">
-            <img src="./asset/aboutpic.png" alt="My Photo">
+            <img src="./asset/Noval.png" alt="My Photo">
             <div class="abt-text">
                 <h1>About <span>Me</span></h1>
                 <p>Pesona Wisata is a travel website project developed by Group 4 using HTML, CSS and JavaScript.</p>
@@ -112,11 +104,7 @@
 
                 </div>
             </div>
-            
-
-           </div>
-           
-
+        </div>
     </section>
 
 
