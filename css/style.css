@@ -375,7 +375,7 @@ nav ul li a{
 /* Footer */
 
 .footer{
-    margin-top: 80px;
+    margin-top: 120px;
     background-color: rgb(21, 74, 74);
 }
 
@@ -460,13 +460,14 @@ nav ul li a{
 /* About Us */
 
 .aboutbody{
-    background-color: #191919;
-    
+    /* background-color: #191919; */
+    background-image: url(/asset/bgAbout.png);
 }
 
 .about{
     width: 100%;
-    padding: 200px 0px;
+    padding-top: 130px;
+    padding: 130px 0px;
 }
 
 .about img{
@@ -479,9 +480,9 @@ nav ul li a{
 }
 
 .abt-text h1{
-    font-size: 70px;
+    font-size: 60px;
     color: white;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     letter-spacing: 1px;
 }
 

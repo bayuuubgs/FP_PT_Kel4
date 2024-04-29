@@ -16,7 +16,7 @@
 
 <body class="contactbody">
            <nav>
-            <img src="./asset/logo.png" class="logo" alt="Logo" title="FirstFlight Travels">
+            <img src="./asset/logo.png" class="logo" alt="Logo" title="Pesona Wisata">
 
             <ul class="navbar">
                 <li>

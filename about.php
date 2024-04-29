@@ -16,7 +16,7 @@
 </head>
 <body class="aboutbody">
         <nav>
-            <img src="./asset/logo.png" class="logo" alt="Logo" title="FirstFlight Travels">
+            <img src="./asset/logo.png" class="logo" alt="Logo" title="Pesona Wosata">
 
             <ul class="navbar">
                 <li>
@@ -28,7 +28,7 @@
                 </li>
             </ul>
         </nav>
-        
+    
     <section class="about">
            <div class="main">
             <img src="./asset/Bayu.png" alt="My Photo">
@@ -60,17 +60,17 @@
             <img src="./asset/Vishnu.png" alt="My Photo">
             <div class="abt-text">
                 <h1>About <span>Me</span></h1>
-                <p>Pesona Wisata is a travel website project developed by Group 4 using HTML, CSS and JavaScript.</p>
+                <p>Panggilan ke petualangan, ke kreativitas, ke kebebasan yang tak terhingga. Panggilan dari dunia luar yang menanti untuk dijelajahi. Inilah Pesona Wisata</p>
                 <a href="https://www.linkedin.com/in/mohdrahil101" class="connectbtn" target="_blank">Connect with me!</a>
 
                 <div class="connect-section">
 
                     <div class="social-icons">
                         <a href="https://www.facebook.com/mohd.rahil.blogger" target="_blank"><i class='bx bxl-facebook'></i></a>
-                        <a href="https://www.instagram.com/mohdrahil101" target="_blank"><i class='bx bxl-instagram' ></i></a>
+                        <a href="https://www.instagram.com/_lynx.57" target="_blank"><i class='bx bxl-instagram' ></i></a>
                         <a href="https://www.twitter.com/mohdrahil101" target="_blank"><i class='bx bxl-twitter' ></i></a>
                         <a href="https://www.linkedin.com/in/mohdrahil101" target="_blank"><i class='bx bxl-linkedin' ></i></a>
-                        <a href="https://www.youtube.com/techdollarz" target="_blank"><i class='bx bxl-youtube' ></i></a>
+                        <a href="https://www.youtube.com/@VarGaming57" target="_blank"><i class='bx bxl-youtube' ></i></a>
                         <a href="https://www.mohdrahil.wordpress.com" target="_blank"><i class='bx bxl-wordpress' ></i></a>
                         <a href="https://www.github.com/mohdrahil101" target="_blank"><i class='bx bxl-github'></i></a>
                         <a href="https://www.amazon.in/shop/mohdrahil101" target="_blank"><i class='bx bxl-amazon'></i></a>
@@ -142,7 +142,7 @@
     </div>
 
     <div class="end">
-        <p>Copyright © 2022 Firstflight Travels All Rights Reserved.<br>Website developed by: Mohd. Rahil</p>
+        <p>Copyright © 2024 Pesona Wisata All Rights Reserved.<br>Website developed by: group 4</p>
     </div>
 </section>
 

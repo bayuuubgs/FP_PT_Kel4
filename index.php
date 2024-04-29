@@ -25,7 +25,7 @@
 
     <div class="content" id="home"> 
         <nav>
-            <img src="./asset/Logo.png" class="logo" alt="Logo" title="FirstFlight Travels">
+            <img src="./asset/Logo.png" class="logo" alt="Logo" title="Pesona Wisata">
             
             <ul class="navbar">
                 <li>
