@@ -40,14 +40,12 @@
                 <div class="connect-section">
 
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/mohd.rahil.blogger" target="_blank"><i class='bx bxl-facebook'></i></a>
-                        <a href="https://www.instagram.com/mohdrahil101" target="_blank"><i class='bx bxl-instagram' ></i></a>
-                        <a href="https://www.twitter.com/mohdrahil101" target="_blank"><i class='bx bxl-twitter' ></i></a>
-                        <a href="https://www.linkedin.com/in/mohdrahil101" target="_blank"><i class='bx bxl-linkedin' ></i></a>
-                        <a href="https://www.youtube.com/techdollarz" target="_blank"><i class='bx bxl-youtube' ></i></a>
-                        <a href="https://www.mohdrahil.wordpress.com" target="_blank"><i class='bx bxl-wordpress' ></i></a>
-                        <a href="https://www.github.com/mohdrahil101" target="_blank"><i class='bx bxl-github'></i></a>
-                        <a href="https://www.amazon.in/shop/mohdrahil101" target="_blank"><i class='bx bxl-amazon'></i></a>
+                        <a href="" target="_blank"><i class='bx bxl-facebook'></i></a>
+                        <a href="" target="_blank"><i class='bx bxl-instagram' ></i></a>
+                        <a href="" target="_blank"><i class='bx bxl-twitter' ></i></a>
+                        <a href="" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+                        <a href="" target="_blank"><i class='bx bxl-youtube' ></i></a>
+                        <a href="" target="_blank"><i class='bx bxl-github'></i></a>
                     </div>
 
                 </div>
@@ -66,16 +64,13 @@
                 <div class="connect-section">
 
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/mohd.rahil.blogger" target="_blank"><i class='bx bxl-facebook'></i></a>
+                        <a href="" target="_blank"><i class='bx bxl-facebook'></i></a>
                         <a href="https://www.instagram.com/_lynx.57" target="_blank"><i class='bx bxl-instagram' ></i></a>
-                        <a href="https://www.twitter.com/mohdrahil101" target="_blank"><i class='bx bxl-twitter' ></i></a>
-                        <a href="https://www.linkedin.com/in/mohdrahil101" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+                        <a href="" target="_blank"><i class='bx bxl-twitter' ></i></a>
+                        <a href="" target="_blank"><i class='bx bxl-linkedin' ></i></a>
                         <a href="https://www.youtube.com/@VarGaming57" target="_blank"><i class='bx bxl-youtube' ></i></a>
-                        <a href="https://www.mohdrahil.wordpress.com" target="_blank"><i class='bx bxl-wordpress' ></i></a>
-                        <a href="https://www.github.com/mohdrahil101" target="_blank"><i class='bx bxl-github'></i></a>
-                        <a href="https://www.amazon.in/shop/mohdrahil101" target="_blank"><i class='bx bxl-amazon'></i></a>
+                        <a href="" target="_blank"><i class='bx bxl-github'></i></a>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -92,16 +87,13 @@
                 <div class="connect-section">
 
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/mohd.rahil.blogger" target="_blank"><i class='bx bxl-facebook'></i></a>
-                        <a href="https://www.instagram.com/mohdrahil101" target="_blank"><i class='bx bxl-instagram' ></i></a>
-                        <a href="https://www.twitter.com/mohdrahil101" target="_blank"><i class='bx bxl-twitter' ></i></a>
-                        <a href="https://www.linkedin.com/in/mohdrahil101" target="_blank"><i class='bx bxl-linkedin' ></i></a>
-                        <a href="https://www.youtube.com/techdollarz" target="_blank"><i class='bx bxl-youtube' ></i></a>
-                        <a href="https://www.mohdrahil.wordpress.com" target="_blank"><i class='bx bxl-wordpress' ></i></a>
-                        <a href="https://www.github.com/mohdrahil101" target="_blank"><i class='bx bxl-github'></i></a>
-                        <a href="https://www.amazon.in/shop/mohdrahil101" target="_blank"><i class='bx bxl-amazon'></i></a>
+                        <a href="" target="_blank"><i class='bx bxl-facebook'></i></a>
+                        <a href="https://www.instagram.com/_novalfirmansyah/" target="_blank"><i class='bx bxl-instagram' ></i></a>
+                        <a href="" target="_blank"><i class='bx bxl-twitter' ></i></a>
+                        <a href="" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+                        <a href="" target="_blank"><i class='bx bxl-youtube' ></i></a>
+                        <a href="https://github.com/NovallFirmansyah" target="_blank"><i class='bx bxl-github'></i></a>
                     </div>
-
                 </div>
             </div>
         </div>
