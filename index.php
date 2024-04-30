@@ -40,7 +40,7 @@
  
         <div class="title">
             <h1>PESONA WISATA</h1>
-            <p>Plan your trip with us and travel around the world with the most affordable packages!</p>
+            <p>Rencanakan liburan mu dengan sebaik mungkin melalui Pesona Wisata!</p>
             <a href="./register.php" class="button">Register Now!</a>
         </div>
     </div>

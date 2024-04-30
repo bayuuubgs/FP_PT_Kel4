@@ -31,7 +31,7 @@
     
     <section class="about">
            <div class="main">
-            <img src="./asset/Bayu.png" alt="My Photo">
+            <img src="./asset/Bayu.png" alt="My Photo" title="Aku bayu">
             <div class="abt-text">
                 <h1>About <span>Me</span></h1>
                 <p>Pesona Wisata is a travel website project developed by Group 4 using HTML, CSS and JavaScript.</p>
@@ -57,7 +57,7 @@
 
     <section class="about">
            <div class="main">
-            <img src="./asset/Vishnu.png" alt="My Photo">
+            <img src="./asset/Vishnu.png" alt="My Photo" title="Aku vishnu">
             <div class="abt-text">
                 <h1>About <span>Me</span></h1>
                 <p>Panggilan ke petualangan, ke kreativitas, ke kebebasan yang tak terhingga. Panggilan dari dunia luar yang menanti untuk dijelajahi. Inilah Pesona Wisata</p>
@@ -83,7 +83,7 @@
 
     <section class="about">
            <div class="main">
-            <img src="./asset/Noval.png" alt="My Photo">
+            <img src="./asset/Noval.png" alt="My Photo" title="Aku noval">
             <div class="abt-text">
                 <h1>About <span>Me</span></h1>
                 <p>Pesona Wisata is a travel website project developed by Group 4 using HTML, CSS and JavaScript.</p>
