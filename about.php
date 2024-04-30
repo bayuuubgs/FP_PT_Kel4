@@ -81,7 +81,7 @@
             <img src="./asset/Noval.png" alt="My Photo" title="Aku noval">
             <div class="abt-text">
                 <h1>About <span>Me</span></h1>
-                <p>Pesona Wisata is a travel website project developed by Group 4 using HTML, CSS and JavaScript.</p>
+                <p>Perkenalkan nama saya Adrian Noval Firmansyah dengan NPM 22082010214, Saya berasal dari Universitas Pembangunan Nasional "Veteran" Jawa Timur.</p>
                 <a href="https://www.linkedin.com/in/mohdrahil101" class="connectbtn" target="_blank">Connect with me!</a>
 
                 <div class="connect-section">
@@ -137,6 +137,5 @@
         <p>Copyright © 2024 Pesona Wisata All Rights Reserved.<br>Website developed by: group 4</p>
     </div>
 </section>
-
 </body>
 </html>

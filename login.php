@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pesona Wisata</title>
+    <title>Login</title>
     <link rel="icon" href="./asset/Logo.png">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,7 +49,7 @@
                 </div>
             <button type="submit" class="btn">Login</button>
             <div class="register">
-                <p><a href="#">Lupa Password?</a></p>
+                <p><a href="admin.php">Lupa Password?</a></p>
                 <p> Tidak punya akun? <a href="register.php">Register.</a></p>
             </div>
         </form>
