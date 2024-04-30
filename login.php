@@ -50,6 +50,7 @@
             <button type="submit" class="btn">Login</button>
             <div class="register">
                 <p><a href="admin.php">Lupa Password?</a></p>
+                <p><a href="owner.php">Ingat Password?</a></p>
                 <p> Tidak punya akun? <a href="register.php">Register.</a></p>
             </div>
         </form>
