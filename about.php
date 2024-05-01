@@ -16,7 +16,7 @@
 </head>
 <body class="aboutbody">
         <nav>
-            <img src="./asset/logo.png" class="logo" alt="Logo" title="Pesona Wosata">
+            <img src="./asset/logo.png" class="logo" alt="Logo" title="Pesona Wisata">
 
             <ul class="navbar">
                 <li>

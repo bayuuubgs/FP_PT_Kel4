@@ -37,7 +37,7 @@
 
 <body1>
     <div class="wrapper">
-        <form action="">
+        <form action="" method="post">
             <h1>Login</h1>
             <div class="inputbox">
                     <input  type="text" required="Requiered" name="User">
@@ -49,8 +49,7 @@
                 </div>
             <button type="submit" class="btn">Login</button>
             <div class="register">
-                <p><a href="admin.php">Lupa pwword?</a></p>
-                <p><a href="owner.php">Ingat pwword?</a></p>
+                <p><a href="owner.php">Lupa password?</a></p>
                 <p> Tidak punya akun? <a href="register.php">Register.</a></p>
             </div>
         </form>
@@ -59,7 +58,7 @@
     <?php
         session_start();
         $user = 'admin';
-        $pw = 'admin';
+        $pw = '111';
         $user1 = 'owner';
         $pw1 = 'owner';
         
@@ -85,16 +84,13 @@
                 $_SESSION['user'] = $_POST['User'];
 
                 //Apabila login berhasil, maka diarahkan ke admin.php
-                header("location:admin.php");
-                ?>
+                header("location:admin.php");?>
                 <?php
                 } else {
                     echo 'user/pwword Tidak Sesuai';
                     return false;
                 }
-            }
-            
+            }   
         ?>
-
-</body1>
+        </body1>
 </html>

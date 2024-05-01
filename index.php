@@ -101,7 +101,7 @@
     <div class="location-content">
         
         <a href="./locations.php#kashmir" target="_blank"><div class="col-content">
-            <img src="./asset/l1.jpg" alt="">
+            <img src="./asset/ampat.jpg" alt="">
             <h5>Papua</h5>
             <p>Raja Ampat</p>
         </div></a>
@@ -109,45 +109,45 @@
        
 
         <a href="./locations.php#istanbul" target="_blank"><div class="col-content">
-            <img src="./asset/l2.jpg" alt="">
+            <img src="./asset/bajo.jpg" alt="">
             <h5>Nusa Tenggara Timur</h5>
             <p>Labuan Bajo</p>
         </div></a>
 
         <a href="./locations.php#paris" target="_blank"><div class="col-content">
-            <img src="./asset/l3.jpg" alt="">
+            <img src="./asset/toba.jpg" alt="">
             <h5>Sumatra Utara</h5>
             <p>Danau Toba</p>
         </div></a>
 
         <a href="./locations.php#bali" target="_blank"><div class="col-content">
-            <img src="./asset/l4.jpg" alt="">
+            <img src="./asset/merah.jpg" alt="">
             <h5>Jawa Timur</h5>
-            <p>Bromo</p>
+            <p>Pulau Merah</p>
         </div></a>
 
         <a href="./locations.php#dubai" target="_blank"><div class="col-content">
-            <img src="./asset/l5.jpg" alt="">
+            <img src="./asset/nusa.jpg" alt="">
             <h5>Bali</h5>
             <p>Nusa Penida</p>
         </div></a>
 
         <a href="./locations.php#geneva" target="_blank"><div class="col-content">
-            <img src="./asset/l6.jpg" alt="">
-            <h5>Nusa Tenggara Barat</h5>
-            <p>Gunung Rinjani</p>
+            <img src="./asset/neira.jpg" alt="">
+            <h5>Maluku</h5>
+            <p>bandai Neira</p>
         </div></a>
 
         <a href="./locations.php#port-blair" target="_blank"><div class="col-content">
-            <img src="./asset/l7.jpg" alt="">
-            <h5>Jawa Timur</h5>
-            <p>Kawah Ijen</p>
+            <img src="./asset/derawan.jpg" alt="">
+            <h5>Kalimantan Timur</h5>
+            <p>Pulau Derawan</p>
         </div></a>
 
         <a href="./locations.php#rome" target="_blank"><div class="col-content">
-            <img src="./asset/l8.jpg" alt="">
-            <h5>Jawa Tengah</h5>
-            <p>Dieng</p>
+            <img src="./asset/bunaken.jpg" alt="">
+            <h5>Sulawesi Utara</h5>
+            <p>Pulau Bunaken</p>
         </div></a>
 
     </div>
@@ -165,15 +165,16 @@
         <div class="box">
             <div class="image">
                 <img src="./asset/p1.jpg" alt="">
-                <h3>Rs.9,999/-</h3>
+                <h3>Rp 200.000/-</h3>
             </div>
         
         <div class="dest-content">
             <div class="location">
-                <h4>Bronze</h4>
+                <h4>Backpacker</h4>
                 <ul class="pac-details">
                     <li>2 Star Hotel</li>
-                    <li>5 Nights Stay</li>
+                    <li>1 Nights Stay</li>
+                    <li>Free Snack</li>
                     <li>Free photo Session</li>
                     <li>Friendly Tour Guide</li>
                     <li>24/7 Customer Help Center</li>
@@ -185,7 +186,7 @@
         <div class="box">
             <div class="image">
                 <img src="./asset/p2.jpg" alt="">
-                <h3>Rs.19,999/-</h3>
+                <h3>Rp 550.000/-</h3>
             </div>
         
         <div class="dest-content">
@@ -193,7 +194,8 @@
                 <h4>Silver</h4>
                 <ul class="pac-details">
                     <li>3 Star Hotel</li>
-                    <li>7 Nights Stay</li>
+                    <li>3 Nights Stay</li>
+                    <li>Free Snack</li>
                     <li>Free photo Session</li>
                     <li>Friendly Tour Guide</li>
                     <li>24/7 Customer Help Center</li>
@@ -205,7 +207,7 @@
         <div class="box">
             <div class="image">
                 <img src="./asset/p3.jpg" alt="">
-                <h3>Rs.29,999/-</h3>
+                <h3>Rp 825.000/-</h3>
             </div>
         
         <div class="dest-content">
@@ -213,7 +215,7 @@
                 <h4>Gold</h4>
                 <ul class="pac-details">
                     <li>4 Star Hotel</li>
-                    <li>10 Nights Stay</li>
+                    <li>5 Nights Stay</li>
                     <li>Breakfast and Dinner</li>
                     <li>Free photo Session</li>
                     <li>Friendly Tour Guide</li>
@@ -226,7 +228,7 @@
         <div class="box">
             <div class="image">
                 <img src="./asset/p4.jpg" alt="">
-                <h3>Rs.39,999/-</h3>
+                <h3>Rp 1.215.000/-</h3>
             </div>
         
         <div class="dest-content">
@@ -234,9 +236,9 @@
                 <h4>Platinum</h4>
                 <ul class="pac-details">
                     <li>5 Star Hotel</li>
-                    <li>14 Nights Stay</li>
+                    <li>7 Nights Stay</li>
                     <li>Breakfast, Lunch and Dinner</li>
-                    <li>Bornfire</li>
+                    <li>Ballroom</li>
                     <li>Free photo Session</li>
                     <li>Friendly Tour Guide</li>
                     <li>24/7 Customer Help Center</li>

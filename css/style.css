@@ -459,9 +459,10 @@ nav ul li a{
 
 /* About Us */
 
+
 .aboutbody{
-    background-image: url(/asset/bgAbout.jpg);
-    background-color: #191919;
+    /* background-image: url(asset/bgAbout.jpg); */
+     background-color: #191919;
 }
 
 .about{

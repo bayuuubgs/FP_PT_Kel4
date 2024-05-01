@@ -29,10 +29,10 @@
     </nav>
 <section class="location-section">
     <div class="location-heading">
-        <h1>Discover The <span>Beautiful World</span></h1>
+        <h1>Menyelami Keindahan <span>Indonesia</span></h1>
     </div>
- <div class="location-detail" id="kashmir">
-    <h1>Kashmir</h1>
+ <div class="location-detail" id="Papua">
+    <h1>Raja Ampat</h1>
     <div class="stars">
         <a href="#"><i class='bx bxs-star'></i></a>
         <a href="#"><i class='bx bxs-star'></i></a>
@@ -40,29 +40,14 @@
         <a href="#"><i class='bx bxs-star'></i></a>
         <a href="#"><i class='bx bxs-star'></i></a>
     </div>
-    <p>Heaven on Earth Kashmir is one of the most beautiful travel destinations to visit in North India. Nowhere in India you will behold the scenic landscapes, icy glaciers, pristine lakes and lofty mountains as beautiful as Kashmir. Serenity and Tranquility redefines itself from the ambiance of Kashmir. Be it summer, Winter or Monsoon, every season has its own charm in Kashmir. The numerous wonders of nature, culture, cuisines and rich history of Kashmir will elevate your travel experience in Incredible India.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima autem quaerat perspiciatis ab laboriosam, similique veritatis nostrum mollitia vel odio dolor rerum a ducimus sequi ipsum incidunt numquam odit expedita!</p>
     <div class="location-img">
-        <img src="./asset/t1.jpg" alt="">
+        <img src="./asset/papat.jpg" alt="">
     </div>
  </div>
 
- <div class="location-detail" id="istanbul">
-    <h1>Istanbul</h1>
-    <div class="stars">
-        <a href="#"><i class='bx bxs-star'></i></a>
-        <a href="#"><i class='bx bxs-star'></i></a>
-        <a href="#"><i class='bx bxs-star'></i></a>
-        <a href="#"><i class='bx bxs-star'></i></a>
-        <a href="#"><i class='bx bxs-star-half'></i></a>
-    </div>
-    <p>Istanbul, that offers unique historical and cultural riches together has hosted many different civilizations with its geography spread over two continents. This unique city which is admired by its charming nature and the attractive atmosphere is also the symbol of dynamic and modern city life. Istanbul has a multicultural texture and a lively atmosphere that melts the past and future in a single pot which provides a sense of universal history at every step.</p>
-    <div class="location-img">
-        <img src="./asset/t2.jpg" alt="">
-    </div>
- </div>
-
- <div class="location-detail" id="paris">
-    <h1>Paris</h1>
+ <div class="location-detail" id="Nusa Tenggara Timur">
+    <h1>Labuan Bajo</h1>
     <div class="stars">
         <a href="#"><i class='bx bxs-star'></i></a>
         <a href="#"><i class='bx bxs-star'></i></a>
@@ -70,14 +55,14 @@
         <a href="#"><i class='bx bxs-star'></i></a>
         <a href="#"><i class='bx bxs-star-half'></i></a>
     </div>
-    <p>Paris is a diverse and sophisticated city that appeals to the wealthy but can also be enjoyed on a budget. In addition to the Eiffel Tower, Paris has countless other gorgeous landmarks and monuments that add to the beauty of the spacious boulevards and their charming cafes. French cuisine is also world famous, and you can find some of the best of it in Paris. It has many stunning sights that showcase impressive architecture and design, and these places have become world-famous for their beauty.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis suscipit ut, ullam nostrum magni ipsum, ea tempora mollitia minima eaque inventore, repellendus velit omnis delectus eum corrupti aspernatur placeat a.</p>
     <div class="location-img">
-        <img src="./asset/t3.jpg" alt="">
+        <img src="./asset/labuan.jpg" alt="">
     </div>
  </div>
 
- <div class="location-detail" id="bali">
-    <h1>Bali</h1>
+ <div class="location-detail" id="Sumatra Utara">
+    <h1>Danau Toba</h1>
     <div class="stars">
         <a href="#"><i class='bx bxs-star'></i></a>
         <a href="#"><i class='bx bxs-star'></i></a>
@@ -85,43 +70,14 @@
         <a href="#"><i class='bx bxs-star'></i></a>
         <a href="#"><i class='bx bxs-star-half'></i></a>
     </div>
-    <p>Bali's beauty goes way deeper than its beautiful appearances. Matching Bali's natural wonders are its ever-growing choice of awesome accommodations. From lavish resorts to affordable hostels, developers go all-out to create outstanding, well-equipped and enjoyable places to stay. Private villas can even be rented at unbelievably affordable prices. Many resorts and hotels have splendid swimming and infinity pools, most of which are attractions in themselves.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nihil, ex est similique commodi, mollitia reiciendis dignissimos, magnam hic dolorem fugit ipsam id omnis qui natus maiores alias assumenda. Numquam.</p>
     <div class="location-img">
-        <img src="./asset/t4.jpg" alt="">
+        <img src="./asset/tobi.jpg" alt="">
     </div>
  </div>
 
- <div class="location-detail" id="dubai">
-    <h1>Dubai</h1>
-    <div class="stars">
-        <a href="#"><i class='bx bxs-star'></i></a>
-        <a href="#"><i class='bx bxs-star'></i></a>
-        <a href="#"><i class='bx bxs-star'></i></a>
-        <a href="#"><i class='bx bxs-star'></i></a>
-        <a href="#"><i class='bx bxs-star'></i></a>
-    </div>
-    <p>Dubai is an ideal holiday destination for families, with theme parks, beaches, Friday brunches and more to keep everyone happy. The famous Burj Khalifa, the tallest building in the world, is well worth the entrance fee. Burj Al-Arab, often touted as the world's only 7-star hotel, remains underwhelming. Similarly, the Aquaventure Water Park at the Palms Atlantis Hotel is not to be missed. Jumeriah Beach Residence is well established as Dubai's most popular beachfront, and its close proximity to a whole host of restaurants, cafes and shops make it more than worthy of its status.</p>
-    <div class="location-img">
-        <img src="./asset/t5.jpg" alt="">
-    </div>
- </div>
-
- <div class="location-detail" id="geneva">
-    <h1>Geneva</h1>
-    <div class="stars">
-        <a href="#"><i class='bx bxs-star'></i></a>
-        <a href="#"><i class='bx bxs-star'></i></a>
-        <a href="#"><i class='bx bxs-star'></i></a>
-        <a href="#"><i class='bx bxs-star-half'></i></a>
-    </div>
-    <p>The charming city of Geneva comes with a plethora of attractions and tremendous natural beauty that makes every traveler fall in love with it. However, because of this overabundance of attractions, it becomes difficult for the backpackers to determine where to go first. Most of them generally miss out on all the best things that this fantastic city has to offer. The capital of Switzerland and a beautiful lakeside city, Geneva is home to many international organisations like the UN.</p>
-    <div class="location-img">
-        <img src="./asset/t6.jpg" alt="">
-    </div>
- </div>
-
- <div class="location-detail" id="port-blair">
-    <h1>Port Blair</h1>
+ <div class="location-detail" id="Jawa Timur">
+    <h1>Pulau Merah</h1>
     <div class="stars">
         <a href="#"><i class='bx bxs-star'></i></a>
         <a href="#"><i class='bx bxs-star'></i></a>
@@ -129,14 +85,58 @@
         <a href="#"><i class='bx bxs-star'></i></a>
         <a href="#"><i class='bx bxs-star-half'></i></a>
     </div>
-    <p>Port Blair is an alluring destination for tourists as it includes a host of attractive locales. There are shimmering but clean beaches, beaches that defy the ferocity of sea and let tourists swim leisurely, relics of colonial power and oppression, many must-go museums, libraries, coral reefs, and more.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ducimus corrupti odio ex, culpa quasi aliquid! Vel optio labore iure sapiente ratione earum, cupiditate ut blanditiis, nisi inventore quod id?</p>
     <div class="location-img">
-        <img src="./asset/t7.jpg" alt="">
+        <img src="./asset/abang.jpg" alt="">
     </div>
  </div>
 
- <div class="location-detail" id="rome">
-    <h1>Rome</h1>
+ <div class="location-detail" id="Bali">
+    <h1>Nusa Penida</h1>
+    <div class="stars">
+        <a href="#"><i class='bx bxs-star'></i></a>
+        <a href="#"><i class='bx bxs-star'></i></a>
+        <a href="#"><i class='bx bxs-star'></i></a>
+        <a href="#"><i class='bx bxs-star'></i></a>
+        <a href="#"><i class='bx bxs-star'></i></a>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit porro dignissimos, beatae quae impedit error eos quaerat, vel dolor nulla dolores laboriosam vitae? Quod, labore praesentium ex autem quas iure?</p>
+    <div class="location-img">
+        <img src="./asset/penida.jpg" alt="">
+    </div>
+ </div>
+
+ <div class="location-detail" id="Maluku">
+    <h1>Banda Neira</h1>
+    <div class="stars">
+        <a href="#"><i class='bx bxs-star'></i></a>
+        <a href="#"><i class='bx bxs-star'></i></a>
+        <a href="#"><i class='bx bxs-star'></i></a>
+        <a href="#"><i class='bx bxs-star-half'></i></a>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum alias ad optio corrupti quidem, autem magni maiores laborum odit aspernatur distinctio magnam, tempora quisquam? Architecto exercitationem soluta consequatur iure numquam.</p>
+    <div class="location-img">
+        <img src="./asset/bandar.jpg" alt="">
+    </div>
+ </div>
+
+ <div class="location-detail" id="Kalimantan Timur">
+    <h1>Pulau Derawan</h1>
+    <div class="stars">
+        <a href="#"><i class='bx bxs-star'></i></a>
+        <a href="#"><i class='bx bxs-star'></i></a>
+        <a href="#"><i class='bx bxs-star'></i></a>
+        <a href="#"><i class='bx bxs-star'></i></a>
+        <a href="#"><i class='bx bxs-star-half'></i></a>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda debitis quasi doloribus delectus cumque vitae. Placeat a vel magni aperiam quia tenetur veniam esse dolores quasi dicta, eligendi, atque quibusdam?</p>
+    <div class="location-img">
+        <img src="./asset/dera.jpg" alt="">
+    </div>
+ </div>
+
+ <div class="location-detail" id="Sulawesi Utara">
+    <h1>Pulau Bunaken</h1>
     <div class="stars">
         <a href="#"><i class='bx bxs-star'></i></a>
         <a href="#"><i class='bx bxs-star'></i></a>
@@ -145,7 +145,7 @@
     </div>
     <p>The capital of one of the most powerful ancient empires in the world, Rome is a fascinating place that has inspired people to visit for millennia. With incredible works of art, a leisurely pace of life and world-renowned cuisine, the Eternal City is worth a visit at least once, though it would take a lifetime to see all it has to offer.</p>
     <div class="location-img">
-        <img src="./asset/t8.jpg" alt="">
+        <img src="./asset/buna.jpg" alt="">
     </div>
  </div>
     </section>
