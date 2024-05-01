@@ -91,63 +91,63 @@
 
 </section>
 
-<!-- Locations -->
+<!-- Destinasi -->
 
 <section class="locations" id="locations">
     <div class="package-title">
-        <h2>Locations</h2>
+        <h2>Destinasi</h2>
     </div>
 
     <div class="location-content">
         
         <a href="./locations.php#kashmir" target="_blank"><div class="col-content">
             <img src="./asset/l1.jpg" alt="">
-            <h5>India</h5>
-            <p>Kashmir</p>
+            <h5>Papua</h5>
+            <p>Raja Ampat</p>
         </div></a>
 
        
 
         <a href="./locations.php#istanbul" target="_blank"><div class="col-content">
             <img src="./asset/l2.jpg" alt="">
-            <h5>Turkey</h5>
-            <p>Istanbul</p>
+            <h5>Nusa Tenggara Timur</h5>
+            <p>Labuan Bajo</p>
         </div></a>
 
         <a href="./locations.php#paris" target="_blank"><div class="col-content">
             <img src="./asset/l3.jpg" alt="">
-            <h5>France</h5>
-            <p>Paris</p>
+            <h5>Sumatra Utara</h5>
+            <p>Danau Toba</p>
         </div></a>
 
         <a href="./locations.php#bali" target="_blank"><div class="col-content">
             <img src="./asset/l4.jpg" alt="">
-            <h5>Indonesia</h5>
-            <p>Bali</p>
+            <h5>Jawa Timur</h5>
+            <p>Bromo</p>
         </div></a>
 
         <a href="./locations.php#dubai" target="_blank"><div class="col-content">
             <img src="./asset/l5.jpg" alt="">
-            <h5>United Arab Emirates</h5>
-            <p>Dubai</p>
+            <h5>Bali</h5>
+            <p>Nusa Penida</p>
         </div></a>
 
         <a href="./locations.php#geneva" target="_blank"><div class="col-content">
             <img src="./asset/l6.jpg" alt="">
-            <h5>Switzerland</h5>
-            <p>Geneva</p>
+            <h5>Nusa Tenggara Barat</h5>
+            <p>Gunung Rinjani</p>
         </div></a>
 
         <a href="./locations.php#port-blair" target="_blank"><div class="col-content">
             <img src="./asset/l7.jpg" alt="">
-            <h5>Andaman & Nicobar</h5>
-            <p>Port Blair</p>
+            <h5>Jawa Timur</h5>
+            <p>Kawah Ijen</p>
         </div></a>
 
         <a href="./locations.php#rome" target="_blank"><div class="col-content">
             <img src="./asset/l8.jpg" alt="">
-            <h5>Italy</h5>
-            <p>Rome</p>
+            <h5>Jawa Tengah</h5>
+            <p>Dieng</p>
         </div></a>
 
     </div>
