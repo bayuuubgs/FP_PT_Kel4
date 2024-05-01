@@ -21,7 +21,7 @@
                 <a href="#">Beranda</a>
                 <a href="#">Laporan</a>
                 <a href=".#">Pengaturan</a>
-                <a href="./Index.php">Logout</a>
+                <a href="./logout.php">Logout</a>
                 <a href="#"><i class="fa-solid fa-user"></i></a>
             </li>
         </ul>
@@ -30,3 +30,13 @@
 <body2>
     <h1>Simulasi Halaman Admin</h1><br>
 </body2>
+<?php
+session_start();
+// Apabila langsung mengakses admin.php tanpa login, maka akan diarahkan ke index.php untuk login terlebih dahulu
+if (!isset($_SESSION['nama'])) {
+    
+    // Menuju index.php
+    header("location:login.php");
+    exit;
+}
+?>

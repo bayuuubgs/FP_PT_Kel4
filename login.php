@@ -40,20 +40,61 @@
         <form action="">
             <h1>Login</h1>
             <div class="inputbox">
-                    <input  type="text" required="Requiered" id="text">
+                    <input  type="text" required="Requiered" name="User">
                     <span>Username</span><br>
                 </div>
                 <div class="inputbox">
-                    <input  type="text" required="Requiered" id="num1">
-                    <span>Password</span><br>
+                    <input  type="password" required="Requiered" name="Pass">
+                    <span>password</span><br>
                 </div>
             <button type="submit" class="btn">Login</button>
             <div class="register">
-                <p><a href="admin.php">Lupa Password?</a></p>
-                <p><a href="owner.php">Ingat Password?</a></p>
+                <p><a href="admin.php">Lupa pwword?</a></p>
+                <p><a href="owner.php">Ingat pwword?</a></p>
                 <p> Tidak punya akun? <a href="register.php">Register.</a></p>
             </div>
         </form>
-        </div>
+    </div>
+    
+    <?php
+        session_start();
+        $user = 'admin';
+        $pw = 'admin';
+        $user1 = 'owner';
+        $pw1 = 'owner';
+        
+        // Apabila telah login namun admin ingin kembali ke index.php tanpa logout, maka akses tidak dapat diakses, admin harus melakukan logout terlebih dahulu
+        if (isset($_SESSION['user'])) {
+            header("location:admin.php");
+            exit;
+        }
+
+        // Apabila telah login namun owner kembali ke index.php tanpa logout, maka akses tidak dapat diakses, owner harus melakukan logout terlebih dahulu
+        if (isset($_SESSION['user1'])) {
+            header("location:owner.php");
+            exit;
+        }
+
+        if (isset($_POST['User']) && isset($_POST['Pass'])) {
+            $U = trim($_POST['User']);
+            $P = trim($_POST['Pass']);
+
+            $_SESSION['user'] = $_POST['User'];
+            if ( ($U === $user) && ($P === $pw) ) {
+                // Set Session Login
+                $_SESSION['user'] = $_POST['User'];
+
+                //Apabila login berhasil, maka diarahkan ke admin.php
+                header("location:admin.php");
+                ?>
+                <?php
+                } else {
+                    echo 'user/pwword Tidak Sesuai';
+                    return false;
+                }
+            }
+            
+        ?>
+
 </body1>
 </html>
