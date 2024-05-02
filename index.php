@@ -283,7 +283,7 @@
             <div class="footlinks">
                 <h4>Connect</h4>
                 <div class="social">
-                    <a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
+                    <a href="registertrial.php" target="_blank"><i class='bx bxl-facebook'></i></a>
                     <a href="#" target="_blank"><i class='bx bxl-instagram' ></i></a>
                     <a href="#" target="_blank"><i class='bx bxl-twitter' ></i></a>
                     <a href="#" target="_blank"><i class='bx bxl-github'></i></a>

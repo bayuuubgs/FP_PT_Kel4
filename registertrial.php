@@ -33,13 +33,31 @@
         <div class="register-form">
             <h1>Register <span>Here</span></h1>
             <form action="" onsubmit="return validateform()">
+            <div class="inputbox-register">
+                <input  type="text" required="Requiered" name="Email">
+                <span>Email</span><br>
+            </div>
 
-            <input type="text" name="myname1" placeholder="Name" id="name" required>
-            <input type="email" name="myemail" placeholder="Email" id="" required>
-            <input type="tel" name="myphone" placeholder="Phone No." id="phonenum" required>
-            <input type="number" name="myage" placeholder="Age" id="" required>
-            <input type="text" name="mypassword" placeholder="Password" id="" required>
-            <input type="text" name="mypassword" placeholder="Confirm Password" id="" required>
+            <div class="inputbox-register">
+                <input  type="tel" required="Requiered" name="Phone">
+                <span>Phone Number</span><br>
+            </div>
+            
+            <div class="inputbox-register">
+                <input  type="text" required="Requiered" name="User">
+                <span>Username</span><br>
+            </div>
+            
+            <div class="inputbox-register">
+                <input  type="password" required="Requiered" name="Pass">
+                <span>Password</span><br>
+            </div>
+            
+            <div class="inputbox-register">
+                <input  type="password" required="Requiered" name="CheckPass">
+                <span>Confirm Password</span><br>
+            </div>
+
             <h4>Gender</h4>
             <input type="radio" name="mygender" id="" required> Male &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
             <input type="radio" name="mygender" id=""> Female
@@ -48,6 +66,7 @@
             <br> <br> 
             <input type="checkbox" name="t&c" id="" checked required> I accept the Terms & Conditions.
             <br> <br> 
+
             <input type="submit" value="Submit" class="submitbtn">
 
         </form>
