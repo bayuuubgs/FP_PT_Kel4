@@ -50,7 +50,7 @@
 
 <section class="container">
     <div class="text">
-        <h2>We have the best services available for you!</h2>
+        <h2>Kita punya service terbaik buat kamu!</h2>
     </div>
     <div class="rowitems">
         <div class="container-box">
@@ -100,7 +100,7 @@
 
     <div class="location-content">
         
-        <a href="./locations.php#kashmir" target="_blank"><div class="col-content">
+        <a href="./locations.php#Papua" target="_blank"><div class="col-content">
             <img src="./asset/ampat.jpg" alt="">
             <h5>Papua</h5>
             <p>Raja Ampat</p>
@@ -108,43 +108,43 @@
 
        
 
-        <a href="./locations.php#istanbul" target="_blank"><div class="col-content">
+        <a href="./locations.php#Nusa Tenggara Timur" target="_blank"><div class="col-content">
             <img src="./asset/bajo.jpg" alt="">
             <h5>Nusa Tenggara Timur</h5>
             <p>Labuan Bajo</p>
         </div></a>
 
-        <a href="./locations.php#paris" target="_blank"><div class="col-content">
+        <a href="./locations.php#Sumatra Utara" target="_blank"><div class="col-content">
             <img src="./asset/toba.jpg" alt="">
             <h5>Sumatra Utara</h5>
             <p>Danau Toba</p>
         </div></a>
 
-        <a href="./locations.php#bali" target="_blank"><div class="col-content">
+        <a href="./locations.php#Jawa Timur" target="_blank"><div class="col-content">
             <img src="./asset/merah.jpg" alt="">
             <h5>Jawa Timur</h5>
             <p>Pulau Merah</p>
         </div></a>
 
-        <a href="./locations.php#dubai" target="_blank"><div class="col-content">
+        <a href="./locations.php#Bali" target="_blank"><div class="col-content">
             <img src="./asset/nusa.jpg" alt="">
             <h5>Bali</h5>
             <p>Nusa Penida</p>
         </div></a>
 
-        <a href="./locations.php#geneva" target="_blank"><div class="col-content">
+        <a href="./locations.php#Maluku" target="_blank"><div class="col-content">
             <img src="./asset/neira.jpg" alt="">
             <h5>Maluku</h5>
             <p>bandai Neira</p>
         </div></a>
 
-        <a href="./locations.php#port-blair" target="_blank"><div class="col-content">
+        <a href="./locations.php#Kalimantan Timur" target="_blank"><div class="col-content">
             <img src="./asset/derawan.jpg" alt="">
             <h5>Kalimantan Timur</h5>
             <p>Pulau Derawan</p>
         </div></a>
 
-        <a href="./locations.php#rome" target="_blank"><div class="col-content">
+        <a href="./locations.php#Sulawesi Utara" target="_blank"><div class="col-content">
             <img src="./asset/bunaken.jpg" alt="">
             <h5>Sulawesi Utara</h5>
             <p>Pulau Bunaken</p>
@@ -175,8 +175,6 @@
                     <li>2 Star Hotel</li>
                     <li>1 Nights Stay</li>
                     <li>Free Snack</li>
-                    <li>Free photo Session</li>
-                    <li>Friendly Tour Guide</li>
                     <li>24/7 Customer Help Center</li>
                 </ul>
             </div>
@@ -196,7 +194,6 @@
                     <li>3 Star Hotel</li>
                     <li>3 Nights Stay</li>
                     <li>Free Snack</li>
-                    <li>Free photo Session</li>
                     <li>Friendly Tour Guide</li>
                     <li>24/7 Customer Help Center</li>
                 </ul>
@@ -286,13 +283,10 @@
             <div class="footlinks">
                 <h4>Connect</h4>
                 <div class="social">
-                    <a href="https://www.facebook.com/mohd.rahil.blogger" target="_blank"><i class='bx bxl-facebook'></i></a>
-                    <a href="https://www.instagram.com/mohdrahil101" target="_blank"><i class='bx bxl-instagram' ></i></a>
-                    <a href="https://www.twitter.com/mohdrahil101" target="_blank"><i class='bx bxl-twitter' ></i></a>
-                    <a href="https://www.linkedin.com/in/mohdrahil101" target="_blank"><i class='bx bxl-linkedin' ></i></a>
-                    <a href="https://www.youtube.com/techdollarz" target="_blank"><i class='bx bxl-youtube' ></i></a>
-                    <a href="https://www.mohdrahil.wordpress.com" target="_blank"><i class='bx bxl-wordpress' ></i></a>
-                    <a href="https://www.github.com/mohdrahil101" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
+                    <a href="#" target="_blank"><i class='bx bxl-instagram' ></i></a>
+                    <a href="#" target="_blank"><i class='bx bxl-twitter' ></i></a>
+                    <a href="#" target="_blank"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
             

@@ -264,6 +264,26 @@ nav ul li a{
     transform: scale(1.03);
 }
 
+.btn-order {
+    font-style: oblique;
+    padding: 10px;
+    color: white;
+    background-color: rgb(21, 74, 74);
+    /* background-color:rgb(164, 44, 44); */
+    border-radius: 5px;
+    border-color: transparent;
+    text-decoration: none;
+    transition: ease 0.30s;
+}
+
+.btn-order:hover{
+    transform: scale(1.2);
+    color: rgb(21, 74, 74);
+    background-color: white;
+    /* border: 2px solid rgb(42, 37, 68); */
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.4);
+}
+
 /* Destinasi */
 
 .location-content{
@@ -459,10 +479,8 @@ nav ul li a{
 
 /* About Us */
 
-
 .aboutbody{
-    /* background-image: url(asset/bgAbout.jpg); */
-     background-color: #191919;
+    background-position: center;
 }
 
 .about{
@@ -726,8 +744,13 @@ nav ul li a{
     width: 400px;
     margin-top: 30px;
     margin-bottom: 30px;
+    transition: ease 0.30s;
 }
 
+.location-img img:hover {
+    transform: scale(1.1);
+
+}
 .stars i{
     font-size: 20px;
     color: rgb(197, 167, 44);

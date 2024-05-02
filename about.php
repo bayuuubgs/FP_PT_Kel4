@@ -14,7 +14,7 @@
     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     
 </head>
-<body class="aboutbody">
+<body style="background-image: url(./asset/bgAbout.jpg);" class="aboutbody">
         <nav>
             <img src="./asset/logo.png" class="logo" alt="Logo" title="Pesona Wisata">
 
