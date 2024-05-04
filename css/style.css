@@ -715,17 +715,6 @@ nav ul li a{
     font-size: 20px;
 }
 
-.register-form form input{
-    color: white;
-    padding: 17px;
-    background-color: #191919;
-    font-size: 20px;
-    outline: none;
-    border: none;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    
-}
 .register-form h4{
     font-size: 22px;
     font-weight: 500;
@@ -750,57 +739,6 @@ nav ul li a{
     border: 2px solid #fc0050;
     background-color: transparent;
     transform: scale(1.1);
-}
-
-
-.location-body{
-    background-color: #191919;
-    color: white;
-}
-
-.location-section{
-    padding: 110px;
-    height: 100%;
-    min-height: 100vh;
-}
-
-.location-heading h1{
-    margin-top: 20px;
-    font-size: 60px;
-    margin-bottom: 20px;
-}
-
-.location-heading h1 span{
-    color: #fc0050;
-}
-
-.location-detail h1{
-    padding-top: 60px;
-    color: #fc0050;
-    font-size: 40px;
-}
-
-.location-detail p{
-    font-size: 20px;
-    margin-top: 40px;
-    margin-bottom: 10px;
-}
-
-.location-img img{
-    height: 400px;
-    width: 400px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    transition: ease 0.30s;
-}
-
-.location-img img:hover {
-    transform: scale(1.1);
-
-}
-.stars i{
-    font-size: 20px;
-    color: rgb(197, 167, 44);
 }
 
 /* Login Form */

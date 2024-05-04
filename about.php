@@ -134,7 +134,7 @@
     </div>
 
     <div class="end">
-        <p>Copyright © 2024 Pesona Wisata All Rights Reserved.<br>Website developed by: group 4</p>
+        <p>Copyright © 2024 Pesona Wisata.<br>Website developed by: group 4</p>
     </div>
 </section>
 </body>

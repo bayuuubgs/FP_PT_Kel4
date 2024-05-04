@@ -1,3 +1,46 @@
+<?php
+include_once ("koneksi.php");
+$query= "SELECT * FROM tb_user ";
+$hasil= mysqli_query ($conn, $query);
+
+if (isset($_POST['Submit'])) {
+    $email = $_POST['Email'];
+    $phone = $_POST['Phone'];
+    $name = $_POST['Name'];
+    $user = $_POST['User'];
+    $pass1 = $_POST['Pass1'];
+    $pass2 = $_POST['Pass2'];
+    $gender = $_POST['Gender'];
+    $date = $_POST['Date'];
+
+
+    $cek_user = mysqli_query($conn, "SELECT * FROM tb_user WHERE username = '$user'");
+    $cek_login = mysqli_num_rows($cek_user);
+    
+    if($cek_login > 0) {
+        echo "<script>
+        alert('Username Telah Terdaftar');
+        window.location = 'registertrial.php';
+        </script>";
+    }
+    else {
+        if ($pass1 != $pass2) {
+            echo "<script>
+            alert('Konfirmasi Password Tidak Sesuai');
+            window.location = 'registertrial.php';
+            </script>";
+        }
+        else {
+            mysqli_query($conn, "INSERT INTO tb_user VALUES('', '$email', '$phone', '$name', '$user', '$pass1', '$gender', '$date')");
+            echo "<script>
+            alert('Akun Berhasil Dibuat!');
+            window.location = 'index.php';
+            </script>";
+        }
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,15 +58,12 @@
 </head>
 <body style="background-image: url(./asset/bgAbout.jpg);" class="register-body">
 
-    <nav>
+    <nav style="position: absolute;">
         <img src="./asset/logo.png" class="logo" alt="Logo" title="Pesona Wisata">
 
         <ul class="navbar">
             <li>
             <a href="./index.php">Beranda</a>
-                <a href="./index.php#locations">Destinasi</a>
-                <a href="./index.php#package">Packages</a>
-                <a href="./about.php">About Us</a>
                 <a href="./login.php">Login</a>
             </li>
         </ul>
@@ -32,25 +72,48 @@
     <section class="registration">
         <div class="register-form">
             <h1>Register <span>Here</span></h1>
-            <form action="" onsubmit="return validateform()">
+            <form action="" method="POST">
+                <div class="inputbox-register">
+                    <input  type="text" required="Requiered" name="Email">
+                    <span>Email</span><br>
+                </div>
 
-            <input type="text" name="myname1" placeholder="Name" id="name" required>
-            <input type="email" name="myemail" placeholder="Email" id="" required>
-            <input type="tel" name="myphone" placeholder="Phone No." id="phonenum" required>
-            <input type="number" name="myage" placeholder="Age" id="" required>
-            <input type="text" name="mypassword" placeholder="Password" id="" required>
-            <input type="text" name="mypassword" placeholder="Confirm Password" id="" required>
-            <h4>Gender</h4>
-            <input type="radio" name="mygender" id="" required> Male &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-            <input type="radio" name="mygender" id=""> Female
-            <h4>Lahir</h4>
-            <input type="datetime-local" name="returndate" id="" required>
-            <br> <br> 
-            <input type="checkbox" name="t&c" id="" checked required> I accept the Terms & Conditions.
-            <br> <br> 
-            <input type="submit" value="Submit" class="submitbtn">
+                <div class="inputbox-register">
+                    <input  type="text" required="Requiered" name="Phone">
+                    <span>Phone Number</span><br>
+                </div>
+                
+                <div class="inputbox-register">
+                    <input  type="text" required="Requiered" name="Name">
+                    <span>Name</span><br>
+                </div>
+                
+                <div class="inputbox-register">
+                    <input  type="text" required="Requiered" name="User">
+                    <span>Username</span><br>
+                </div>
+                
+                <div class="inputbox-register">
+                    <input  type="password" required="Requiered" name="Pass1">
+                    <span>Password</span><br>
+                </div>
+                
+                <div class="inputbox-register">
+                    <input  type="password" required="Requiered" name="Pass2">
+                    <span>Confirm Password</span><br>
+                </div>
 
-        </form>
+                <h4>Gender</h4>
+                <input type="radio" name="Gender" value="Male" id="" required> Male &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                <input type="radio" name="Gender" value="Female" id=""> Female
+                <h4>Lahir</h4>
+                <input type="date" name="Date" id="" required>
+                <br> <br> 
+                <input type="checkbox" name="t&c" id="" checked required> I accept the Terms & Conditions.
+                <br> <br> 
+
+                <input type="submit" value="Signup" name="Submit" class="submitbtn">
+            </form>
         </div>
     </section>
 
@@ -86,25 +149,8 @@
     </div>
 
     <div class="end">
-        <p>Copyright © 2022 Firstflight Travels All Rights Reserved.<br>Website developed by: Group 4</p>
+        <p>Copyright © 2024 Pesona Wisata.<br>Website developed by: Group 4</p>
     </div>
 </section>
-
-<!-- Javascript -->
-<script>
-    function validateform(){ 
-        var tel=document.getElementById("phonenum").value;  
-
-        if(tel.length<10){  
-            alert("Phone number must be of atleast 10 digits!");  
-            return false;  
-        } else if(isNaN(tel)){
-            alert("Phone number should not include character!");
-            return false;
-        }
-        return true;
-}  
-</script>
-
 </body>
 </html>
