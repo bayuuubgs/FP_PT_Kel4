@@ -20,18 +20,19 @@ if (isset($_POST['Submit'])) {
     if($cek_login > 0) {
         echo "<script>
         alert('Username Telah Terdaftar');
-        window.location = 'registertrial.php';
+        window.location = 'register.php';
         </script>";
     }
     else {
         if ($pass1 != $pass2) {
             echo "<script>
             alert('Konfirmasi Password Tidak Sesuai');
-            window.location = 'registertrial.php';
+            window.location = 'register.php';
             </script>";
         }
         else {
-            mysqli_query($conn, "INSERT INTO tb_user VALUES('', '$email', '$phone', '$name', '$user', '$pass1', '$gender', '$date')");
+            $password = password_hash($pass1, PASSWORD_DEFAULT);
+            mysqli_query($conn, "INSERT INTO tb_user VALUES('', '$email', '$phone', '$name', '$user', '$password', '$gender', '$date')");
             echo "<script>
             alert('Akun Berhasil Dibuat!');
             window.location = 'index.php';

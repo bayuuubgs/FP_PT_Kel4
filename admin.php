@@ -32,10 +32,10 @@
 </body2>
 <?php
 session_start();
-// Apabila langsung mengakses admin.php tanpa login, maka akan diarahkan ke index.php untuk login terlebih dahulu
-if (!isset($_SESSION['user'])) {
+// Apabila langsung mengakses admin.php tanpa login, maka akan diarahkan ke login.php untuk login terlebih dahulu
+if (!isset($_SESSION['Login'])) {
     
-    // Menuju index.php
+    // Menuju login.php
     header("location:login.php");
     exit;
 }

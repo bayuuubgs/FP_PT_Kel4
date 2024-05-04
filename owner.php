@@ -21,7 +21,7 @@
                 <a href="#">Beranda</a>
                 <a href="#">Laporan</a>
                 <a href=".#">Pengaturan</a>
-                <a href="./Index.php">Logout</a>
+                <a href="./logout.php">Logout</a>
                 <a href="#"><i class="fa-solid fa-user"></i></a>
             </li>
         </ul>

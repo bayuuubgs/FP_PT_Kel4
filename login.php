@@ -1,3 +1,36 @@
+<?php
+include_once ("koneksi.php");
+
+    session_start();
+    if(isset($_POST['Login'])) {
+        $user = $_POST['User'];
+        $pass = $_POST['Pass'];
+
+        $cek_user = mysqli_query($conn, "SELECT * FROM tb_user WHERE username = '$user'");
+        if(mysqli_num_rows($cek_user)=== 1) {
+            $data = mysqli_fetch_assoc($cek_user);
+
+            if (password_verify($pass, $data['password'])) {
+                    header("location: admin.php");
+                    exit();
+            } else {
+                // Kata sandi tidak cocok
+                echo "<script>
+                    alert('Username atau Password salah!');
+                    window.location = 'login.php';
+                </script>";
+                exit();
+            }
+        }else {
+            echo "<script>
+                alert('Username tidak ditemukan!');
+                window.location = 'login.php';
+            </script>";
+            exit();
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,50 +80,12 @@
                     <input  type="password" required="Requiered" name="Pass">
                     <span>password</span><br>
                 </div>
-            <button type="submit" class="btn">Login</button>
+            <button type="submit" name="Login" class="btn">Login</button>
             <div class="register">
                 <p><a href="owner.php">Lupa password?</a></p>
                 <p> Tidak punya akun? <a href="register.php">Register.</a></p>
             </div>
         </form>
     </div>
-    
-    <?php
-        session_start();
-        $user = 'admin';
-        $pw = '111';
-        $user1 = 'owner';
-        $pw1 = 'owner';
-        
-        // Apabila telah login namun admin ingin kembali ke index.php tanpa logout, maka akses tidak dapat diakses, admin harus melakukan logout terlebih dahulu
-        if (isset($_SESSION['user'])) {
-            header("location:admin.php");
-            exit;
-        }
-
-        // Apabila telah login namun owner kembali ke index.php tanpa logout, maka akses tidak dapat diakses, owner harus melakukan logout terlebih dahulu
-        if (isset($_SESSION['user1'])) {
-            header("location:owner.php");
-            exit;
-        }
-
-        if (isset($_POST['User']) && isset($_POST['Pass'])) {
-            $U = trim($_POST['User']);
-            $P = trim($_POST['Pass']);
-
-            $_SESSION['user'] = $_POST['User'];
-            if ( ($U === $user) && ($P === $pw) ) {
-                // Set Session Login
-                $_SESSION['user'] = $_POST['User'];
-
-                //Apabila login berhasil, maka diarahkan ke admin.php
-                header("location:admin.php");?>
-                <?php
-                } else {
-                    echo 'user/pwword Tidak Sesuai';
-                    return false;
-                }
-            }   
-        ?>
-        </body1>
+</body1>
 </html>
