@@ -1,34 +1,42 @@
 <?php
 include_once ("koneksi.php");
+session_start();
+if(isset($_POST['Login'])) {
+    $user = $_POST['User'];
+    $pass = $_POST['Pass'];
 
-    session_start();
-    if(isset($_POST['Login'])) {
-        $user = $_POST['User'];
-        $pass = $_POST['Pass'];
-
-        $cek_user = mysqli_query($conn, "SELECT * FROM tb_user WHERE username = '$user'");
-        if(mysqli_num_rows($cek_user)=== 1) {
-            $data = mysqli_fetch_assoc($cek_user);
-
-            if (password_verify($pass, $data['password'])) {
-                    header("location: admin.php");
-                    exit();
+    $cek_user = mysqli_query($conn, "SELECT * FROM tb_user WHERE username = '$user'");
+        
+    if(mysqli_num_rows($cek_user)=== 1) {
+        $data = mysqli_fetch_assoc($cek_user);
+            
+        if (password_verify($pass, $data['password'])) {
+            $_SESSION['Login'] = true;
+            if ($data['username'] === "admin1" || $data['username'] === "admin2" || $data['username'] === "admin3") {
+                $_SESSION['nama'] = $data['name'];
+                header("location: admin.php");
+                exit();
             } else {
-                // Kata sandi tidak cocok
-                echo "<script>
-                    alert('Username atau Password salah!');
-                    window.location = 'login.php';
-                </script>";
+                // Pengguna bukan admin, arahkan ke halaman index.php
+                header("location: index.php");
                 exit();
             }
         }else {
+            // Kata sandi tidak cocok
             echo "<script>
-                alert('Username tidak ditemukan!');
+                alert('Username atau Password salah!');
                 window.location = 'login.php';
             </script>";
             exit();
         }
+    }else {
+        echo "<script>
+            alert('Username tidak ditemukan!');
+            window.location = 'login.php';
+        </script>";
+        exit();
     }
+}
 ?>
 
 <!DOCTYPE html>
