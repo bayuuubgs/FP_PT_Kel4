@@ -11,9 +11,8 @@ if(isset($_POST['Login'])) {
         $data = mysqli_fetch_assoc($cek_user);
             
         if (password_verify($pass, $data['password'])) {
-            $_SESSION['Login'] = true;
+            $_SESSION['nama'] = $data['username'];
             if ($data['username'] === "admin1" || $data['username'] === "admin2" || $data['username'] === "admin3") {
-                $_SESSION['nama'] = $data['name'];
                 header("location: admin.php");
                 exit();
             } else {

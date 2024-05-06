@@ -33,12 +33,12 @@
     <a href="logout.php">Logout</a>
 </body2>
 <?php
-// session_start();
-// // Apabila langsung mengakses admin.php tanpa login, maka akan diarahkan ke login.php untuk login terlebih dahulu
-// if (!isset($_SESSION['Login'])) {
+session_start();
+// Apabila langsung mengakses admin.php tanpa login, maka akan diarahkan ke login.php untuk login terlebih dahulu
+if (!isset($_SESSION['nama'])) {
     
-//     // Menuju login.php
-//     header("location:login.php");
-//     exit;
-// }
+    // Menuju login.php
+    header("location:login.php");
+    exit;
+}
 ?>
