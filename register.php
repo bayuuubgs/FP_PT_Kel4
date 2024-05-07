@@ -35,7 +35,7 @@ if (isset($_POST['Submit'])) {
             mysqli_query($conn, "INSERT INTO tb_user VALUES('', '$email', '$phone', '$name', '$user', '$password', '$gender', '$date')");
             echo "<script>
             alert('Akun Berhasil Dibuat!');
-            window.location = 'index.php';
+            window.location = 'login.php';
             </script>";
         }
     }

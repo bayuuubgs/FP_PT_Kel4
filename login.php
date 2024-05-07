@@ -9,6 +9,8 @@ if(isset($_POST['Login'])) {
         
     if(mysqli_num_rows($cek_user)=== 1) {
         $data = mysqli_fetch_assoc($cek_user);
+        $username = $data['username'];
+        $name = $data['name'];
             
         if (password_verify($pass, $data['password'])) {
             $_SESSION['nama'] = $data['username'];
