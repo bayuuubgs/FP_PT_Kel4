@@ -17,7 +17,11 @@ if(isset($_POST['Login'])) {
             if ($data['username'] === "admin1" || $data['username'] === "admin2" || $data['username'] === "admin3") {
                 header("location: admin.php");
                 exit();
-            } else {
+            } else if ($data['username'] === "owner") {
+                header("location: owner.php");
+                exit();
+            } 
+            else {
                 // Pengguna bukan admin, arahkan ke halaman index.php
                 header("location: index.php");
                 exit();
