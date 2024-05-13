@@ -63,6 +63,7 @@ nav ul li{
 }
 
 .navbar{
+    margin: 0%;
     display: flex;
     margin-right: 4vh;
 }
@@ -908,8 +909,9 @@ body1 {
 
 /* Admin */
 
-body2 {
-    display: flex;
+.inner {
+    padding: 320px;
+    text-align: center;
     justify-content: center;
-    align-items: center;
+    text-align: center;
 }

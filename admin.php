@@ -55,8 +55,11 @@ if (isset($_SESSION['nama'])) {
             </li>
         </ul>
     </nav>
+    <div class="inner">
+        <h1 style="color: black;">Selamat Datang <?php echo $nama_pengguna; ?></h1>
+    </div>
 </body>
 <body2>
-    <h1>Selamat Datang <?php echo $nama_pengguna; ?></h1>
+    
 </body2>
 </html>
