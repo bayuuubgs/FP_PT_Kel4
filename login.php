@@ -22,8 +22,8 @@ if(isset($_POST['Login'])) {
                 exit();
             } 
             else {
-                // Pengguna bukan admin, arahkan ke halaman index.php
-                header("location: index.php");
+                // Pengguna bukan admin, arahkan ke halaman user.php
+                header("location: user.php");
                 exit();
             }
         }else {
