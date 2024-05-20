@@ -34,14 +34,14 @@
             <img src="./asset/Bayu.png" alt="My Photo" title="Aku bayu">
             <div class="abt-text">
                 <h1>About <span>Me</span></h1>
-                <p>Pesona Wisata is a travel website project developed by Group 4 using HTML, CSS and JavaScript.</p>
+                <p>Perkenalkan nama saya Moh. Bayu Bagus Sutigar dengan NPM 22082010204, Saya berasal dari Universitas Pembangunan Nasional "Veteran" Jawa Timur.</p>
                 <a href="https://www.linkedin.com/in/mohdrahil101" class="connectbtn" target="_blank">Connect with me!</a>
 
                 <div class="connect-section">
 
                     <div class="social-icons">
                         <a href="" target="_blank"><i class='bx bxl-facebook'></i></a>
-                        <a href="" target="_blank"><i class='bx bxl-instagram' ></i></a>
+                        <a href="https://www.instagram.com/__bayubgs/" target="_blank"><i class='bx bxl-instagram' ></i></a>
                         <a href="" target="_blank"><i class='bx bxl-twitter' ></i></a>
                         <a href="" target="_blank"><i class='bx bxl-linkedin' ></i></a>
                         <a href="" target="_blank"><i class='bx bxl-youtube' ></i></a>

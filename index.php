@@ -250,7 +250,7 @@
 
 <!-- Newsletter -->
 
-<!-- <section class="newsletter">
+<section class="newsletter">
     <div class="newstext">
         <h2>Newsletter</h2>
         <p>Subscribe to get offers and latest<br>updates every week!</p>
@@ -263,7 +263,7 @@
         </form>
     </div>
 
-</section> -->
+</section>
 
 <!-- Footer -->
 
