@@ -8,6 +8,7 @@ $hasil= mysqli_query ($conn, $query);
 <html>
 <head>
     <title>Data Pesanan</title>
+    <link rel="icon" href="./asset/Logo.png">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,9 +27,7 @@ $hasil= mysqli_query ($conn, $query);
             <li>
                 <a href="admin.php">Beranda</a>
                 <a href="laporan.php">Laporan</a>
-                <a href=".#">Pengaturan</a>
                 <a href="./logout.php">Logout</a>
-                <a href="#"><i class="fa-solid fa-user"></i></a>
             </li>
         </ul>
     </nav>

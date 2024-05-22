@@ -42,81 +42,87 @@ if (isset($_SESSION['nama'])) {
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
-    <div class="atasan">
-    <nav>
-        <img src="./asset/Logo.png" class="logo" alt="Logo" title="Pesona Wisata">
-        <ul class="navbar">
-            <li>
-                <a href="#">Beranda</a>
-                <a href="laporan.php">Laporan</a>
-                <a href=".#">Pengaturan</a>
-                <a href="./logout.php">Logout</a>
-                <a href="#"><i class="fa-solid fa-user"></i></a>
-            </li>
-        </ul>
-    </nav>
+    <div class="mainn">
+        <div class="atasan">
+        <nav>
+            <img src="./asset/Logo.png" class="logo" alt="Logo" title="Pesona Wisata">
+            <ul class="navbar">
+                <li>
+                    <a href="#">Beranda</a>
+                    <a href="laporan.php">Laporan Keseluruhan</a>
+                    <a href="./logout.php">Logout</a>
+                </li>
+            </ul>
+        </nav>
     </div>
     <section class="locations" id="locations">
-    <div class="package-title">
-        <h2>Destinasi</h2>
+        <h2>Selamat Datang <?php echo $nama_pengguna; ?></h2>
+        <div class="package-title">
+            <h2>Kelola Wisata</h2>
+        </div>
+
+        <div class="location-content">
+            
+            <a class="start"><div class="col-content">
+                <img src="./asset/ampat.jpg" alt="">
+                <h5>Papua</h5>
+                <p>Raja Ampat</p>
+            </div></a>
+
+            <a href="./locations.php#Nusa Tenggara Timur"><div class="col-content">
+                <img src="./asset/bajo.jpg" alt="">
+                <h5>Nusa Tenggara Timur</h5>
+                <p>Labuan Bajo</p>
+            </div></a>
+
+            <a href="./locations.php#Sumatra Utara"><div class="col-content">
+                <img src="./asset/toba.jpg" alt="">
+                <h5>Sumatra Utara</h5>
+                <p>Danau Toba</p>
+            </div></a>
+
+            <a href="./locations.php#Jawa Timur"><div class="col-content">
+                <img src="./asset/merah.jpg" alt="">
+                <h5>Jawa Timur</h5>
+                <p>Pulau Merah</p>
+            </div></a>
+
+            <a href="./locations.php#Bali"><div class="col-content">
+                <img src="./asset/nusa.jpg" alt="">
+                <h5>Bali</h5>
+                <p>Nusa Penida</p>
+            </div></a>
+
+            <a href="./locations.php#Maluku"><div class="col-content">
+                <img src="./asset/neira.jpg" alt="">
+                <h5>Maluku</h5>
+                <p>bandai Neira</p>
+            </div></a>
+
+            <a href="./locations.php#Kalimantan Timur"><div class="col-content">
+                <img src="./asset/derawan.jpg" alt="">
+                <h5>Kalimantan Timur</h5>
+                <p>Pulau Derawan</p>
+            </div></a>
+
+            <a href="./locations.php#Sulawesi Utara"><div class="col-content">
+                <img src="./asset/bunaken.jpg" alt="">
+                <h5>Sulawesi Utara</h5>
+                <p>Pulau Bunaken</p>
+            </div></a>
+        </div>
+    </section>
+</div>
+    <div class="popup-login">
+        <h2 style="font-size:30pt;">PERATURAN GAME</h2>
+        <span class="info">1. Terdapat 10 soal yang telah disediakan.</span>
+        <span class="info">2. Masing-masing soal mempunyai kesempatan 3 kali kesalahan.</span>
+        <span class="info">3. Enjoyy, selamat bermain!.</span>
+        <div class="btn-group">
+            <button class="info-btn exit-btn">Kembali</button>
+            <a href="#" class="info-btn continue-btn">Mulai</a>
+        </div>
     </div>
-
-    <div class="location-content">
-        
-        <a href="laporanrajaampat.php"><div class="col-content">
-            <img src="./asset/ampat.jpg" alt="">
-            <h5>Papua</h5>
-            <p>Raja Ampat</p>
-        </div></a>
-
-       
-
-        <a href="./locations.php#Nusa Tenggara Timur" target="_blank"><div class="col-content">
-            <img src="./asset/bajo.jpg" alt="">
-            <h5>Nusa Tenggara Timur</h5>
-            <p>Labuan Bajo</p>
-        </div></a>
-
-        <a href="./locations.php#Sumatra Utara" target="_blank"><div class="col-content">
-            <img src="./asset/toba.jpg" alt="">
-            <h5>Sumatra Utara</h5>
-            <p>Danau Toba</p>
-        </div></a>
-
-        <a href="./locations.php#Jawa Timur" target="_blank"><div class="col-content">
-            <img src="./asset/merah.jpg" alt="">
-            <h5>Jawa Timur</h5>
-            <p>Pulau Merah</p>
-        </div></a>
-
-        <a href="./locations.php#Bali" target="_blank"><div class="col-content">
-            <img src="./asset/nusa.jpg" alt="">
-            <h5>Bali</h5>
-            <p>Nusa Penida</p>
-        </div></a>
-
-        <a href="./locations.php#Maluku" target="_blank"><div class="col-content">
-            <img src="./asset/neira.jpg" alt="">
-            <h5>Maluku</h5>
-            <p>bandai Neira</p>
-        </div></a>
-
-        <a href="./locations.php#Kalimantan Timur" target="_blank"><div class="col-content">
-            <img src="./asset/derawan.jpg" alt="">
-            <h5>Kalimantan Timur</h5>
-            <p>Pulau Derawan</p>
-        </div></a>
-
-        <a href="./locations.php#Sulawesi Utara" target="_blank"><div class="col-content">
-            <img src="./asset/bunaken.jpg" alt="">
-            <h5>Sulawesi Utara</h5>
-            <p>Pulau Bunaken</p>
-        </div></a>
-
-    </div>
-</section>
+    <script src="./js/script.js"></script>
 </body>
-<body2>
-    
-</body2>
 </html>
