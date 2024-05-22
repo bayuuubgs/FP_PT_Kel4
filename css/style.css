@@ -956,7 +956,10 @@ body1 {
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1);
 }
+
 .popup-login h2 {
+    justify-content: center;
+    text-align: center;
     font-size: 50px;
     color: rgb(0, 0, 0);
 }
@@ -971,7 +974,7 @@ body1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid #5e23ff;
+    border-top: 1px solid rgb(21, 74, 74);
     margin-top: 10px;
     padding: 15px 0 7px;
 }
@@ -981,7 +984,7 @@ body1 {
     align-items: center;
     width: 130px;
     height: 45px;
-    background-color: #5e23ff;
+    background-color: rgb(21, 74, 74);
     border: 2px solid;
     outline: none;
     border-radius: 6px;
@@ -994,13 +997,61 @@ body1 {
 }
 .popup-login .btn-group .info-btn:nth-child(1) {
     background: transparent;
-    color: #5e23ff;
+    color: rgb(21, 74, 74);
 }
 .popup-login .btn-group .info-btn:nth-child(1):hover {
-    background: #5e23ff;
+    background: rgb(21, 74, 74);
     color: white;
 }
 .popup-login .btn-group .info-btn:nth-child(2):hover {
     background: transparent;
-    color: #5e23ff;
+    color: rgb(21, 74, 74);
+}
+
+.inputbox-popup {
+    margin-left: -10px;
+    padding: 10px;
+    width: 95%;
+    height: 50px;
+    margin: 30px -1px;
+    display: block;
+    position: relative;
+ }
+
+ .inputbox-popup input {
+    height: 100%;
+    width: 95%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    font-size: 16pt;
+    padding: 0px 0px 0px 20px;
+    color: rgb(0, 0, 0);
+}
+
+.inputbox-popup span {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    padding: 10px;
+    color: #686868;
+    pointer-events: none;
+    transition: 0.4s;
+    background-color: transparent;
+}
+.inputbox-popup input:valid ~ span,
+.inputbox-popup input:focus ~ span {
+    color: #000000;
+    transform: translateX(10px) translateY(-12px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    background-color: rgb(255, 255, 255);
+    border-left: 1px solid rgb(21, 74, 74);
+    border-right: 1px solid rgb(21, 74, 74);
+}
+.inputbox-popup input:valid,
+.inputbox-popup input:focus {
+    border: 2px solid rgb(21, 74, 74);
 }

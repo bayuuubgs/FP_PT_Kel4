@@ -114,13 +114,14 @@ if (isset($_SESSION['nama'])) {
     </section>
 </div>
     <div class="popup-login">
-        <h2 style="font-size:30pt;">PERATURAN GAME</h2>
-        <span class="info">1. Terdapat 10 soal yang telah disediakan.</span>
-        <span class="info">2. Masing-masing soal mempunyai kesempatan 3 kali kesalahan.</span>
-        <span class="info">3. Enjoyy, selamat bermain!.</span>
+        <h2 style="font-size:30pt;">Masukkan Kode</h2>
+        <div class="inputbox-popup">
+                    <input  type="text" required="Requiered" name="User">
+                    <span>Apa kodenya?</span><br>
+                </div>
         <div class="btn-group">
             <button class="info-btn exit-btn">Kembali</button>
-            <a href="#" class="info-btn continue-btn">Mulai</a>
+            <a href="#" class="info-btn continue-btn">Login</a>
         </div>
     </div>
     <script src="./js/script.js"></script>
