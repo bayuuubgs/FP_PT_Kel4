@@ -69,43 +69,43 @@ if (isset($_SESSION['nama'])) {
                 <p>Raja Ampat</p>
             </div></a>
 
-            <a href="./locations.php#Nusa Tenggara Timur"><div class="col-content">
+            <a class="start"><div class="col-content">
                 <img src="./asset/bajo.jpg" alt="">
                 <h5>Nusa Tenggara Timur</h5>
                 <p>Labuan Bajo</p>
             </div></a>
 
-            <a href="./locations.php#Sumatra Utara"><div class="col-content">
+            <a class="start"><div class="col-content">
                 <img src="./asset/toba.jpg" alt="">
                 <h5>Sumatra Utara</h5>
                 <p>Danau Toba</p>
             </div></a>
 
-            <a href="./locations.php#Jawa Timur"><div class="col-content">
+            <a class="start"><div class="col-content">
                 <img src="./asset/merah.jpg" alt="">
                 <h5>Jawa Timur</h5>
                 <p>Pulau Merah</p>
             </div></a>
 
-            <a href="./locations.php#Bali"><div class="col-content">
+            <a class="start"><div class="col-content">
                 <img src="./asset/nusa.jpg" alt="">
                 <h5>Bali</h5>
                 <p>Nusa Penida</p>
             </div></a>
 
-            <a href="./locations.php#Maluku"><div class="col-content">
+            <a class="start"><div class="col-content">
                 <img src="./asset/neira.jpg" alt="">
                 <h5>Maluku</h5>
                 <p>bandai Neira</p>
             </div></a>
 
-            <a href="./locations.php#Kalimantan Timur"><div class="col-content">
+            <a class="start"><div class="col-content">
                 <img src="./asset/derawan.jpg" alt="">
                 <h5>Kalimantan Timur</h5>
                 <p>Pulau Derawan</p>
             </div></a>
 
-            <a href="./locations.php#Sulawesi Utara"><div class="col-content">
+            <a class="start"><div class="col-content">
                 <img src="./asset/bunaken.jpg" alt="">
                 <h5>Sulawesi Utara</h5>
                 <p>Pulau Bunaken</p>
