@@ -913,10 +913,11 @@ body1 {
 /* Admin */
 
 .inner {
-    padding: 320px;
+    position: fixed;
+    top: 50%;
+    left: 38%;
     text-align: center;
     justify-content: center;
-    text-align: center;
 }
 
 .atasan{
@@ -952,6 +953,8 @@ body1 {
     transition: 0.5s ease;
 }
 .popup-login.active {
+    /* border: 2px solid rgb(0, 0, 0); */
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
     opacity: 100;
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1);
@@ -1054,4 +1057,24 @@ body1 {
 .inputbox-popup input:valid,
 .inputbox-popup input:focus {
     border: 2px solid rgb(21, 74, 74);
+}
+
+select {
+    margin-left: 6px ;
+    height: 100%;
+    width: 95%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    font-size: 16pt;
+    padding: 0px 0px 0px 20px;
+    color: rgb(0, 0, 0);
+}
+
+/* Style untuk opsi dalam listbox */
+option {
+    font-size: 16px;
+    padding: 10px;
 }

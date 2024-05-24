@@ -25,6 +25,33 @@ if (isset($_SESSION['nama'])) {
     header("location:login.php");
     exit; // Keluar dari skrip
 }
+// Login kelola wisata
+if(isset($_POST['Loginkode'])) {
+    $wisata = $_POST['Wisata'];
+    $kode = $_POST['Kode'];
+
+    $cek_wisata = mysqli_query($conn, "SELECT * FROM tb_wisata WHERE nama_wisata = '$wisata'");
+        
+    if(mysqli_num_rows($cek_wisata) === 1) {
+        // Jika wisata ditemukan, ambil data wisata
+        $data_wisata = mysqli_fetch_assoc($cek_wisata);
+        $kode_wisata_db = $data_wisata['kode_wisata'];
+
+        // Cocokkan kode yang dimasukkan dengan kode wisata dari database
+        if($kode_wisata_db === $kode) {
+            // Jika kode cocok, arahkan pengguna ke halaman lain
+            header("location: laporanwisata.php");
+            exit();
+        } else {
+            // Jika kode tidak cocok, berikan pesan kesalahan
+            echo "<script>
+                    alert('Kode tidak valid!');
+                    window.location = 'admin.php'; // Redirect kembali ke halaman login
+                </script>";
+            exit();
+        }
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -44,84 +71,43 @@ if (isset($_SESSION['nama'])) {
 <body>
     <div class="mainn">
         <div class="atasan">
-        <nav>
-            <img src="./asset/Logo.png" class="logo" alt="Logo" title="Pesona Wisata">
-            <ul class="navbar">
-                <li>
-                    <a href="#">Beranda</a>
-                    <a href="laporan.php">Laporan Keseluruhan</a>
-                    <a href="./logout.php">Logout</a>
-                </li>
-            </ul>
-        </nav>
+            <nav>
+                <img src="./asset/Logo.png" class="logo" alt="Logo" title="Pesona Wisata">
+                <ul class="navbar">
+                    <li>
+                        <a href="#">Beranda</a>
+                        <a class="start">Kelola Wisata</a>
+                        <a href="laporan.php">Laporan Keseluruhan</a>
+                        <a href="./logout.php">Logout</a>
+                    </li>
+                </ul>
+            </nav> 
+        </div>
+        <div class="inner">
+            <h1>Selamat Datang <?php echo $nama_pengguna; ?></h1>
+        </div>
     </div>
-    <section class="locations" id="locations">
-        <h2>Selamat Datang <?php echo $nama_pengguna; ?></h2>
-        <div class="package-title">
-            <h2>Kelola Wisata</h2>
-        </div>
-
-        <div class="location-content">
-            
-            <a class="start"><div class="col-content">
-                <img src="./asset/ampat.jpg" alt="">
-                <h5>Papua</h5>
-                <p>Raja Ampat</p>
-            </div></a>
-
-            <a class="start"><div class="col-content">
-                <img src="./asset/bajo.jpg" alt="">
-                <h5>Nusa Tenggara Timur</h5>
-                <p>Labuan Bajo</p>
-            </div></a>
-
-            <a class="start"><div class="col-content">
-                <img src="./asset/toba.jpg" alt="">
-                <h5>Sumatra Utara</h5>
-                <p>Danau Toba</p>
-            </div></a>
-
-            <a class="start"><div class="col-content">
-                <img src="./asset/merah.jpg" alt="">
-                <h5>Jawa Timur</h5>
-                <p>Pulau Merah</p>
-            </div></a>
-
-            <a class="start"><div class="col-content">
-                <img src="./asset/nusa.jpg" alt="">
-                <h5>Bali</h5>
-                <p>Nusa Penida</p>
-            </div></a>
-
-            <a class="start"><div class="col-content">
-                <img src="./asset/neira.jpg" alt="">
-                <h5>Maluku</h5>
-                <p>bandai Neira</p>
-            </div></a>
-
-            <a class="start"><div class="col-content">
-                <img src="./asset/derawan.jpg" alt="">
-                <h5>Kalimantan Timur</h5>
-                <p>Pulau Derawan</p>
-            </div></a>
-
-            <a class="start"><div class="col-content">
-                <img src="./asset/bunaken.jpg" alt="">
-                <h5>Sulawesi Utara</h5>
-                <p>Pulau Bunaken</p>
-            </div></a>
-        </div>
-    </section>
-</div>
     <div class="popup-login">
+        <form action="" method="post">
         <h2 style="font-size:30pt;">Masukkan Kode</h2>
+        <h3>Pilih Wisata :</h3><br>
+            <select name="Wisata">
+                <option value="Raja Ampat">Raja Ampat</option>
+                <option value="Labuan Bajo">Labuan Bajo</option>
+                <option value="Danau Toba">Danau Toba</option>
+                <option value="Pulau Merah">Pulau Merah</option>
+                <option value="Nusa Penida">Nusa Penida</option>
+                <option value="Banda Neira">Banda Neira</option>
+                <option value="Pulau Derawan">Pulau Derawan</option>
+                <option value="Pulau Bunaken">Pulau Bunaken</option>
+            </select>
         <div class="inputbox-popup">
-                    <input  type="text" required="Requiered" name="User">
-                    <span>Apa kodenya?</span><br>
-                </div>
+            <input type="text" required="Requiered" name="Kode">
+            <span>Apa kodenya?</span><br>
+        </div>
         <div class="btn-group">
             <button class="info-btn exit-btn">Kembali</button>
-            <a href="#" class="info-btn continue-btn">Login</a>
+            <button type="submit" name="Loginkode" class="info-btn">Login</button>
         </div>
     </div>
     <script src="./js/script.js"></script>

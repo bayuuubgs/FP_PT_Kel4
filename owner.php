@@ -43,6 +43,7 @@ if (isset($_SESSION['nama'])) {
     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
+<div class="atasan">
     <nav>
         <img src="./asset/Logo.png" class="logo" alt="Logo" title="Pesona Wisata">
         <ul class="navbar">
@@ -55,7 +56,9 @@ if (isset($_SESSION['nama'])) {
             </li>
         </ul>
     </nav>
-</body>
-<body2>
+</div>
+<div class="inner">
     <h1>Selamat Datang <?php echo $nama_pengguna; ?></h1>
-</body2>
+</div>
+</body>
+</html>
