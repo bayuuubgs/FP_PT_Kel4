@@ -61,7 +61,6 @@ if (isset($_SESSION['nama'])) {
                 <a href="#home">Beranda</a>
                 <a href="#locationsuser">Destinasi</a>
                 <a href="#package">Packages</a>
-                <a href="./about.php">About Us</a>
                 <a href="./logout.php">Logout</a>
                 </li>
             </ul>
@@ -304,7 +303,7 @@ if (isset($_SESSION['nama'])) {
                 <h4>Quick Links</h4>
                 <ul>
                     <li><a href="./about.php">About Us</a></li>
-                    <li><a href="./contact.php">Contact Us</a></li>
+                    <li><a href="./contact.php">Kritik dan Saran</a></li>
                 </ul>
             </div>
 

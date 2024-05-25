@@ -14,8 +14,8 @@
     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">  
 </head>
 
-<body class="contactbody">
-           <nav>
+<body style="background-image: url(./asset/bgAbout.jpg);" class="contactbody">
+           <nav style="position: absolute;">
             <img src="./asset/logo.png" class="logo" alt="Logo" title="Pesona Wisata">
 
             <ul class="navbar">
@@ -31,13 +31,23 @@
 
         <section class="contact">
             <div class="contact-form">
-                <h1>Contact <span>Us</span></h1>
-                <p>We are always out there to help you! Fill out the form given below and get a reply from us within 2 business days.</p>
-            <form action="">
-                <input type="text" name="myname" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your E-mail" required>
-                <input type="text" name="subject" placeholder="What brings you here?" required>
-                <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <h1>Kritik & <span>Saran</span></h1>
+                <p>Mengalami keluhan atau masalah yang terjadi?, laporkan saja agar kami dapat menjadi yang lebih baik!.</p>
+                <form action="" method="POST">
+                <div class="inputbox-register">
+                    <input  type="text" required="Requiered" name="Email">
+                    <span>Email</span><br>
+                </div>
+
+                <div class="inputbox-register">
+                    <input  type="text" required="Requiered" name="Name">
+                    <span>Nama</span><br>
+                </div>
+                
+                <div class="inputbox-register">
+                    <input  type="text" required="Requiered" name="Keluhan">
+                    <span>Tulis disini</span><br>
+                </div><br>
                 <input type="submit" value="Submit" class="submit-btn">
             </form>
             </div>

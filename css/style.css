@@ -592,6 +592,10 @@ nav ul li a{
     min-height: 100vh;
 }
 
+.contact-form{
+    color: white;
+    font-size: 20px;
+}
 .contact-form h1{
     font-size: 80px;
     color: white;
