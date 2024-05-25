@@ -49,7 +49,7 @@ if(isset($_POST['Loginkode'])) {
         // Cocokkan kode yang dimasukkan dengan kode wisata dari database
         if($kode_wisata_db === $kode) {
             $_SESSION['destinasi'] = $data_wisata['nama_wisata'];
-            header("location: laporanwisata.php");
+            header("location: kelolawisata.php");
             exit();
         } else {
             // Jika kode tidak cocok, berikan pesan kesalahan

@@ -26,11 +26,14 @@ $hasil= mysqli_query ($conn, $query);
         <ul class="navbar">
             <li>
                 <a href="admin.php">Beranda</a>
-                <a href="laporan.php">Laporan</a>
+                <a href="laporan.php">Laporan Keseluruhan</a>
                 <a href="./logout.php">Logout</a>
             </li>
         </ul>
     </nav>
+    </div>
+    <div class="alert alert-dark text-center" role="alert">
+        <h2>Laporan Wisata Keseluruhan</h2>
     </div>
     <table class="table table-bordered">
         <thead class="thead-light">
