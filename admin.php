@@ -25,13 +25,22 @@ if (isset($_SESSION['nama'])) {
     header("location:login.php");
     exit; // Keluar dari skrip
 }
+
 // Login kelola wisata
 if(isset($_POST['Loginkode'])) {
     $wisata = $_POST['Wisata'];
     $kode = $_POST['Kode'];
 
+    // Debugging: Periksa apakah data dikirim dengan benar
+    var_dump($wisata, $kode);
+
     $cek_wisata = mysqli_query($conn, "SELECT * FROM tb_wisata WHERE nama_wisata = '$wisata'");
-        
+
+    if (!$cek_wisata) {
+        echo "Error: " . mysqli_error($conn);
+        exit();
+    }
+
     if(mysqli_num_rows($cek_wisata) === 1) {
         // Jika wisata ditemukan, ambil data wisata
         $data_wisata = mysqli_fetch_assoc($cek_wisata);
@@ -39,7 +48,7 @@ if(isset($_POST['Loginkode'])) {
 
         // Cocokkan kode yang dimasukkan dengan kode wisata dari database
         if($kode_wisata_db === $kode) {
-            // Jika kode cocok, arahkan pengguna ke halaman lain
+            $_SESSION['destinasi'] = $data_wisata['nama_wisata'];
             header("location: laporanwisata.php");
             exit();
         } else {
@@ -50,6 +59,13 @@ if(isset($_POST['Loginkode'])) {
                 </script>";
             exit();
         }
+    } else {
+        // Jika wisata tidak ditemukan, berikan pesan kesalahan
+        echo "<script>
+                alert('Wisata tidak ditemukan!');
+                window.location = 'admin.php'; // Redirect kembali ke halaman login
+            </script>";
+        exit();
     }
 }
 ?>
@@ -88,7 +104,7 @@ if(isset($_POST['Loginkode'])) {
         </div>
     </div>
     <div class="popup-login">
-        <form action="" method="post">
+        <form action="" method="POST">
         <h2 style="font-size:30pt;">Masukkan Kode</h2>
         <h3>Pilih Wisata :</h3><br>
             <select name="Wisata">
@@ -102,11 +118,11 @@ if(isset($_POST['Loginkode'])) {
                 <option value="Pulau Bunaken">Pulau Bunaken</option>
             </select>
         <div class="inputbox-popup">
-            <input type="text" required="Requiered" name="Kode">
+            <input type="text" required="Required" name="Kode">
             <span>Apa kodenya?</span><br>
         </div>
         <div class="btn-group">
-            <button class="info-btn exit-btn">Kembali</button>
+            <button class="info-btn exit-btn" type="button">Kembali</button>
             <button type="submit" name="Loginkode" class="info-btn">Login</button>
         </div>
     </div>

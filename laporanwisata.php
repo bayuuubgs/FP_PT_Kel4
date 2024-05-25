@@ -1,6 +1,24 @@
 <?php
 include_once ("koneksi.php");
-$query= "SELECT * FROM `tb_pesanan` WHERE destinasi LIKE 'Raja Ampat'";
+session_start();
+$nama_wisata = "";
+if (isset($_SESSION['destinasi'])) {
+    $name = $_SESSION['destinasi'];
+    $que = "SELECT nama_wisata FROM tb_wisata WHERE nama_wisata = '$name'";
+    $hasil1 = mysqli_query($conn, $que);
+
+    // Periksa apakah query berhasil dieksekusi
+    if ($hasil1) {
+        // Ambil hasil query
+        $row = mysqli_fetch_assoc($hasil1);
+        $nama_wisata = $row['nama_wisata'];
+    } else {
+        // Jika query gagal, tampilkan pesan error
+        echo "Error: " . mysqli_error($conn);
+    }
+
+}
+$query= "SELECT * FROM `tb_pesanan` WHERE destinasi LIKE '$nama_wisata'";
 $hasil= mysqli_query ($conn, $query);
 ?>
 

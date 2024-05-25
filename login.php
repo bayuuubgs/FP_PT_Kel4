@@ -14,7 +14,7 @@ if(isset($_POST['Login'])) {
             
         if (password_verify($pass, $data['password'])) {
             $_SESSION['nama'] = $data['username'];
-            if ($data['username'] === "admin1" || $data['username'] === "admin2" || $data['username'] === "admin3") {
+            if ($data['username'] === "admin") {
                 header("location: admin.php");
                 exit();
             } else if ($data['username'] === "owner") {
