@@ -50,6 +50,9 @@ $hasil= mysqli_query ($conn, $query);
         </ul>
     </nav>
     </div>
+    <div class="alert alert-dark text-center" role="alert">
+        <h2>Kelola Wisata <?php echo $nama_wisata; ?></h2>
+    </div>
     <table class="table table-bordered">
         <thead class="thead-light">
             <tr>
