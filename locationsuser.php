@@ -21,7 +21,7 @@
                 <a href="./user.php">Beranda</a>
                 <a href="./user.php#locations">Destinasi</a>
                 <a href="./user.php#package">Packages</a>
-                <a href="./about.php">About Us</a>
+                <a href="#">Edit Profile</a>
                 <a href="./logout.php">Logout</a>
             </li>
         </ul>

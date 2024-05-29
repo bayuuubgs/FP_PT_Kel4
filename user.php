@@ -39,8 +39,7 @@ if (isset($_SESSION['nama'])) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
-    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
    
 </head>
 <body>
@@ -61,6 +60,7 @@ if (isset($_SESSION['nama'])) {
                 <a href="#home">Beranda</a>
                 <a href="#locationsuser">Destinasi</a>
                 <a href="#package">Packages</a>
+                <a href="#">Edit Profile</a>
                 <a href="./logout.php">Logout</a>
                 </li>
             </ul>

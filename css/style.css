@@ -1063,7 +1063,7 @@ body1 {
     border: 2px solid rgb(21, 74, 74);
 }
 
-select {
+.dropdown {
     margin-left: 6px ;
     height: 100%;
     width: 95%;

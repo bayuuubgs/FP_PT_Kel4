@@ -107,6 +107,7 @@ if(isset($_POST['Loginkode'])) {
         <form action="" method="POST">
         <h2 style="font-size:30pt;">Masukkan Kode</h2>
         <h3>Pilih Wisata :</h3><br>
+        <div class="dropdown">
             <select name="Wisata">
                 <option value="Raja Ampat">Raja Ampat</option>
                 <option value="Labuan Bajo">Labuan Bajo</option>
@@ -117,6 +118,7 @@ if(isset($_POST['Loginkode'])) {
                 <option value="Pulau Derawan">Pulau Derawan</option>
                 <option value="Pulau Bunaken">Pulau Bunaken</option>
             </select>
+        </div>
         <div class="inputbox-popup">
             <input type="text" required="Required" name="Kode">
             <span>Apa kodenya?</span><br>
