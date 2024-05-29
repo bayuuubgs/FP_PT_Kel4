@@ -45,6 +45,7 @@ $hasil= mysqli_query ($conn, $query);
                 <li>
                     <a href="kelolawisata.php">Profile</a>
                     <a href="#">Laporan</a>
+                    <a href="laporanwisata_pdf.php" target="_blank">PRINT</a>
                     <a href="admin.php">Kembali</a>
                 </li>
             </ul>

@@ -27,6 +27,7 @@ $hasil= mysqli_query ($conn, $query);
             <li>
                 <a href="admin.php">Beranda</a>
                 <a href="laporan.php">Laporan Keseluruhan</a>
+                <a href="laporan_pdf.php" target="_blank" >PRINT</a>
                 <a href="./logout.php">Logout</a>
             </li>
         </ul>
