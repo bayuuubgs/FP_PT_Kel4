@@ -44,7 +44,7 @@
             <div class="location-img">
                 <img src="./asset/papat.jpg" alt="">
             </div>
-            <button type="submit" class="btn-order">Pesan Sekarang! >></button>
+            <a href="prosesbeli.php" class="button">Beli Sekarang</a>
         </div>
 
         <div class="location-detail" id="Nusa Tenggara Timur">

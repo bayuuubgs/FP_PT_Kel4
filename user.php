@@ -60,7 +60,7 @@ if (isset($_SESSION['nama'])) {
                 <a href="#home">Beranda</a>
                 <a href="#locationsuser">Destinasi</a>
                 <a href="#package">Packages</a>
-                <a href="#">Edit Profile</a>
+                <a href="editprofile.php">Edit Profile</a>
                 <a href="./logout.php">Logout</a>
                 </li>
             </ul>
