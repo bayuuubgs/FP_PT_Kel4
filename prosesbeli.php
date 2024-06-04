@@ -1,46 +1,49 @@
 <?php
-include_once ("koneksi.php");
-$query= "SELECT * FROM tb_user ";
-$hasil= mysqli_query ($conn, $query);
+include_once("koneksi.php");
+session_start();
+$nama_pengguna = "";
+$wisata = "";
 
-if (isset($_POST['Submit'])) {
-    $email = $_POST['Email'];
-    $phone = $_POST['Phone'];
-    $name = $_POST['Name'];
-    $user = $_POST['User'];
-    $pass1 = $_POST['Pass1'];
-    $pass2 = $_POST['Pass2'];
-    $gender = $_POST['Gender'];
-    $date = $_POST['Date'];
+// Cek apakah pengguna sudah login
+if (isset($_SESSION['nama'])) {
+    $username = $_SESSION['nama'];
+    $query = "SELECT name FROM tb_user WHERE username = '$username'";
+    $hasil = mysqli_query($conn, $query);
 
-
-    $cek_user = mysqli_query($conn, "SELECT * FROM tb_user WHERE username = '$user'");
-    $cek_login = mysqli_num_rows($cek_user);
-    
-    if($cek_login > 0) {
-        echo "<script>
-        alert('Username Telah Terdaftar');
-        window.location = 'register.php';
-        </script>";
+    if ($hasil && mysqli_num_rows($hasil) > 0) {
+        $row = mysqli_fetch_assoc($hasil);
+        $nama_pengguna = $row['name'];
+    } else {
+        echo "Error: Pengguna tidak ditemukan";
     }
-    else {
-        if ($pass1 != $pass2) {
-            echo "<script>
-            alert('Konfirmasi Password Tidak Sesuai');
-            window.location = 'register.php';
-            </script>";
-        }
-        else {
-            $password = password_hash($pass1, PASSWORD_DEFAULT);
-            mysqli_query($conn, "INSERT INTO tb_user VALUES('', '$email', '$phone', '$name', '$user', '$password', '$gender', '$date')");
-            echo "<script>
-            alert('Akun Berhasil Dibuat!');
-            window.location = 'login.php';
-            </script>";
-        }
+} else {
+    header("location:login.php");
+    exit;
+}
+
+if (isset($_SESSION['wisata'])) {
+    $kode = $_SESSION['wisata'];
+    $que = "SELECT nama_wisata FROM tb_wisata WHERE kode_wisata = '$kode'";
+    $result = mysqli_query($conn, $que);
+
+    if ($result && mysqli_num_rows($result) > 0) {
+        $row1 = mysqli_fetch_assoc($result);
+        $wisata = $row1['nama_wisata'];
+    } else {
+        echo "Error: Wisata tidak ditemukan";
     }
 }
+
+// Optimalkan query untuk mendapatkan data pengguna dan data wisata
+$query = "SELECT * FROM `tb_user` WHERE name LIKE '$nama_pengguna'";
+$hasil = mysqli_query($conn, $query);
+$userData = mysqli_fetch_assoc($hasil);
+
+$que = "SELECT * FROM `tb_wisata` WHERE nama_wisata LIKE '$wisata'";
+$result = mysqli_query($conn, $que);
+$userWisata = mysqli_fetch_assoc($result);
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -64,8 +67,7 @@ if (isset($_POST['Submit'])) {
 
         <ul class="navbar">
             <li>
-            <a href="./index.php">Beranda</a>
-                <a href="./login.php">Login</a>
+            <a href="./user.php">Beranda</a>
             </li>
         </ul>
     </nav>
@@ -75,28 +77,22 @@ if (isset($_POST['Submit'])) {
             <h1>Silahkan <span>ISI</span></h1>
             <form action="" method="POST">
                 <div class="inputbox-register">
-                    <input  type="text" required="Requiered" name="Name">
-                    <span>Nama</span><br>
+                    <input  type="text" value="<?php echo $userData['name'] ?>" required="Requiered" name="Name" readonly>
                 </div>
 
                 <div class="inputbox-register">
-                    <input  type="text" required="Requiered" name="Email">
-                    <span>Email</span><br>
+                    <input  type="text" value="<?php echo $userData['email'] ?>" required="Requiered" name="Email" readonly>
                 </div>
                 
                 <div class="inputbox-register">
-                    <input  type="text" required="Requiered" name="Name">
-                    <span>No-Telp</span><br>
+                    <input  type="text" value="<?php echo $userData['phone_number'] ?>" required="Requiered" name="phoneno" readonly>
+                </div>
+                <div class="inputbox-register">
+                    <input  type="text" value="<?php echo $userWisata['nama_wisata'] ?>" required="Requiered" name="wisata" readonly>
                 </div>
                 
                 <div class="inputbox-register">
-                    <input  type="text" required="Requiered" name="wisata">
-                    <span>Nama Wisata</span><br>
-                </div>
-                
-                <div class="inputbox-register">
-                    <input  type="text" required="Requiered" name="harga">
-                    <span>Harga Tiket</span><br>
+                    <input  type="text" value="<?php echo $userWisata['harga_wisata'] ?>" required="Requiered" name="harga" readonly>
                 </div>
 
                 <div class="inputbox-register">
@@ -109,7 +105,8 @@ if (isset($_POST['Submit'])) {
                 <input type="radio" name="Gender" value="Female" id=""> Cash
                 <h4>Tanggal Kunjung</h4>
                 <input type="date" name="Date" id="jadwal" required>
-                <br> <br> 
+                <h4>Total Pembayaran</h4>
+                    <input type="text" required="Requiered" name="harga"><br>
                 <input type="checkbox" name="t&c" id="" checked required> I accept the Terms & Conditions.
                 <br> <br> 
 

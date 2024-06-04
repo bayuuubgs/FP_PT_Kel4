@@ -1,3 +1,29 @@
+<?php
+include_once("koneksi.php");
+session_start();
+
+if(isset($_POST['Login'])) {
+    $id = $_POST['nama'];
+    // Lakukan pembersihan atau validasi input $id sebelum digunakan dalam query SQL
+
+    $cek_id = mysqli_query($conn, "SELECT * FROM tb_wisata WHERE kode_wisata = '$id'");
+        
+    if(mysqli_num_rows($cek_id) === 1) {
+        $data = mysqli_fetch_assoc($cek_id);
+        $nama_wisata = $data['nama_wisata'];
+        // Set session dengan data wisata yang ditemukan
+        $_SESSION['wisata'] = $id; // Menyimpan kode wisata, bukan nama wisata
+        header("location: prosesbeli.php");
+        exit();
+    } else {
+        echo "Wisata tidak ditemukan"; // Tambahkan pesan kesalahan jika wisata tidak ditemukan
+    }
+}
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,134 +54,86 @@
     </nav>
     
     <section class="location-section">
-        <div class="location-heading">
-            <h1>Menyelami Keindahan <span>Indonesia</span></h1>
-        </div>
-        <div class="location-detail" id="Papua">
-            <h1>Raja Ampat</h1>
-            <div class="stars">
-                <a href="#"><i class='bx bxs-star'></i></a>
-                <a href="#"><i class='bx bxs-star'></i></a>
-                <a href="#"><i class='bx bxs-star'></i></a>
-                <a href="#"><i class='bx bxs-star'></i></a>
-                <a href="#"><i class='bx bxs-star'></i></a>
+        <form action="" method="post">
+            <div class="location-heading">
+                <h1>Menyelami Keindahan <span>Indonesia</span></h1>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima autem quaerat perspiciatis ab laboriosam, similique veritatis nostrum mollitia vel odio dolor rerum a ducimus sequi ipsum incidunt numquam odit expedita!</p>
-            <div class="location-img">
-                <img src="./asset/papat.jpg" alt="">
+            <div class="location-detail" id="Papua">
+                <h1>Raja Ampat</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima autem quaerat perspiciatis ab laboriosam, similique veritatis nostrum mollitia vel odio dolor rerum a ducimus sequi ipsum incidunt numquam odit expedita!</p>
+                <div class="location-img">
+                    <img src="./asset/papat.jpg" alt="">
+                </div>
+                <input type="submit" class="btn-order" onclick="setNama('100')" value="Pesan Sekarang! >>">
             </div>
-            <a href="prosesbeli.php" class="button">Beli Sekarang</a>
-        </div>
 
-        <div class="location-detail" id="Nusa Tenggara Timur">
-            <h1>Labuan Bajo</h1>
-            <div class="stars">
-                <a href="#"><i class='bx bxs-star'></i></a>
-                <a href="#"><i class='bx bxs-star'></i></a>
-                <a href="#"><i class='bx bxs-star'></i></a>
-                <a href="#"><i class='bx bxs-star'></i></a>
-                <a href="#"><i class='bx bxs-star-half'></i></a>
+            <div class="location-detail" id="Nusa Tenggara Timur">
+                <h1>Labuan Bajo</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis suscipit ut, ullam nostrum magni ipsum, ea tempora mollitia minima eaque inventore, repellendus velit omnis delectus eum corrupti aspernatur placeat a.</p>
+                <div class="location-img">
+                    <img src="./asset/labuan.jpg" alt="">
+                </div>
+                <input type="submit" class="btn-order" onclick="setNama('101')" value="Pesan Sekarang! >>">
             </div>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis suscipit ut, ullam nostrum magni ipsum, ea tempora mollitia minima eaque inventore, repellendus velit omnis delectus eum corrupti aspernatur placeat a.</p>
-            <div class="location-img">
-                <img src="./asset/labuan.jpg" alt="">
-            </div>
-            <button type="submit" class="btn-order">Pesan Sekarang! >></button>
-        </div>
 
-        <div class="location-detail" id="Sumatra Utara">
-            <h1>Danau Toba</h1>
-            <div class="stars">
-                <a href="#"><i class='bx bxs-star'></i></a>
-                <a href="#"><i class='bx bxs-star'></i></a>
-                <a href="#"><i class='bx bxs-star'></i></a>
-                <a href="#"><i class='bx bxs-star'></i></a>
-                <a href="#"><i class='bx bxs-star-half'></i></a>
+            <div class="location-detail" id="Sumatra Utara">
+                <h1>Danau Toba</h1>
+                
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nihil, ex est similique commodi, mollitia reiciendis dignissimos, magnam hic dolorem fugit ipsam id omnis qui natus maiores alias assumenda. Numquam.</p>
+                <div class="location-img">
+                    <img src="./asset/tobi.jpg" alt="">
+                </div>
+                <input type="submit" class="btn-order" onclick="setNama('102')" value="Pesan Sekarang! >>">
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nihil, ex est similique commodi, mollitia reiciendis dignissimos, magnam hic dolorem fugit ipsam id omnis qui natus maiores alias assumenda. Numquam.</p>
-            <div class="location-img">
-                <img src="./asset/tobi.jpg" alt="">
-            </div>
-            <button type="submit" class="btn-order">Pesan Sekarang! >></button>
-        </div>
 
-        <div class="location-detail" id="Jawa Timur">
-            <h1>Pulau Merah</h1>
-            <div class="stars">
-                <a href="#"><i class='bx bxs-star'></i></a>
-                <a href="#"><i class='bx bxs-star'></i></a>
-                <a href="#"><i class='bx bxs-star'></i></a>
-                <a href="#"><i class='bx bxs-star'></i></a>
-                <a href="#"><i class='bx bxs-star-half'></i></a>
+            <div class="location-detail" id="Jawa Timur">
+                <h1>Pulau Merah</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ducimus corrupti odio ex, culpa quasi aliquid! Vel optio labore iure sapiente ratione earum, cupiditate ut blanditiis, nisi inventore quod id?</p>
+                <div class="location-img">
+                    <img src="./asset/abang.jpg" alt="">
+                </div>
+                <input type="submit" class="btn-order" onclick="setNama('103')" value="Pesan Sekarang! >>">
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ducimus corrupti odio ex, culpa quasi aliquid! Vel optio labore iure sapiente ratione earum, cupiditate ut blanditiis, nisi inventore quod id?</p>
-            <div class="location-img">
-                <img src="./asset/abang.jpg" alt="">
-            </div>
-            <button type="submit" class="btn-order">Pesan Sekarang! >></button>
-        </div>
 
-        <div class="location-detail" id="Bali">
-            <h1>Nusa Penida</h1>
-            <div class="stars">
-                <a href="#"><i class='bx bxs-star'></i></a>
-                <a href="#"><i class='bx bxs-star'></i></a>
-                <a href="#"><i class='bx bxs-star'></i></a>
-                <a href="#"><i class='bx bxs-star'></i></a>
-                <a href="#"><i class='bx bxs-star'></i></a>
+            <div class="location-detail" id="Bali">
+                <h1>Nusa Penida</h1>
+                
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit porro dignissimos, beatae quae impedit error eos quaerat, vel dolor nulla dolores laboriosam vitae? Quod, labore praesentium ex autem quas iure?</p>
+                <div class="location-img">
+                    <img src="./asset/penida.jpg" alt="">
+                </div>
+                <input type="submit" class="btn-order" onclick="setNama('104')" value="Pesan Sekarang! >>">
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit porro dignissimos, beatae quae impedit error eos quaerat, vel dolor nulla dolores laboriosam vitae? Quod, labore praesentium ex autem quas iure?</p>
-            <div class="location-img">
-                <img src="./asset/penida.jpg" alt="">
-            </div>
-            <button type="submit" class="btn-order">Pesan Sekarang! >></button>
-        </div>
 
-        <div class="location-detail" id="Maluku">
-            <h1>Banda Neira</h1>
-            <div class="stars">
-                <a href="#"><i class='bx bxs-star'></i></a>
-                <a href="#"><i class='bx bxs-star'></i></a>
-                <a href="#"><i class='bx bxs-star'></i></a>
-                <a href="#"><i class='bx bxs-star-half'></i></a>
+            <div class="location-detail" id="Maluku">
+                <h1>Banda Neira</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum alias ad optio corrupti quidem, autem magni maiores laborum odit aspernatur distinctio magnam, tempora quisquam? Architecto exercitationem soluta consequatur iure numquam.</p>
+                <div class="location-img">
+                    <img src="./asset/bandar.jpg" alt="">
+                </div>
+                <input type="submit" class="btn-order" onclick="setNama('105')" value="Pesan Sekarang! >>">
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum alias ad optio corrupti quidem, autem magni maiores laborum odit aspernatur distinctio magnam, tempora quisquam? Architecto exercitationem soluta consequatur iure numquam.</p>
-            <div class="location-img">
-                <img src="./asset/bandar.jpg" alt="">
-            </div>
-            <button type="submit" class="btn-order">Pesan Sekarang! >></button>
-        </div>
 
-        <div class="location-detail" id="Kalimantan Timur">
-            <h1>Pulau Derawan</h1>
-            <div class="stars">
-                <a href="#"><i class='bx bxs-star'></i></a>
-                <a href="#"><i class='bx bxs-star'></i></a>
-                <a href="#"><i class='bx bxs-star'></i></a>
-                <a href="#"><i class='bx bxs-star'></i></a>
-                <a href="#"><i class='bx bxs-star-half'></i></a>
+            <div class="location-detail" id="Kalimantan Timur">
+                <h1>Pulau Derawan</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda debitis quasi doloribus delectus cumque vitae. Placeat a vel magni aperiam quia tenetur veniam esse dolores quasi dicta, eligendi, atque quibusdam?</p>
+                <div class="location-img">
+                    <img src="./asset/dera.jpg" alt="">
+                </div>
+                <input type="submit" class="btn-order" onclick="setNama('106')" value="Pesan Sekarang! >>">
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda debitis quasi doloribus delectus cumque vitae. Placeat a vel magni aperiam quia tenetur veniam esse dolores quasi dicta, eligendi, atque quibusdam?</p>
-            <div class="location-img">
-                <img src="./asset/dera.jpg" alt="">
-            </div>
-            <button type="submit" class="btn-order">Pesan Sekarang! >></button>
-        </div>
 
-        <div class="location-detail" id="Sulawesi Utara">
-            <h1>Pulau Bunaken</h1>
-            <div class="stars">
-                <a href="#"><i class='bx bxs-star'></i></a>
-                <a href="#"><i class='bx bxs-star'></i></a>
-                <a href="#"><i class='bx bxs-star'></i></a>
-                <a href="#"><i class='bx bxs-star'></i></a>
+            <div class="location-detail" id="Sulawesi Utara">
+                <h1>Pulau Bunaken</h1>
+                <p>The capital of one of the most powerful ancient empires in the world, Rome is a fascinating place that has inspired people to visit for millennia. With incredible works of art, a leisurely pace of life and world-renowned cuisine, the Eternal City is worth a visit at least once, though it would take a lifetime to see all it has to offer.</p>
+                <div class="location-img">
+                    <img src="./asset/buna.jpg" alt="">
+                </div>
+                <input type="submit" class="btn-order" onclick="setNama('107')" value="Pesan Sekarang! >>">
             </div>
-            <p>The capital of one of the most powerful ancient empires in the world, Rome is a fascinating place that has inspired people to visit for millennia. With incredible works of art, a leisurely pace of life and world-renowned cuisine, the Eternal City is worth a visit at least once, though it would take a lifetime to see all it has to offer.</p>
-            <div class="location-img">
-                <img src="./asset/buna.jpg" alt="">
-            </div>
-            <button type="submit" class="btn-order">Pesan Sekarang! >></button>
-        </div>
+            <input type="hidden" name="nama" id="nama_input">
+            <input type="hidden" name="Login" value="true">
+        </form>
     </section>
         <!-- Footer -->
 
@@ -191,5 +169,10 @@
             <p>Copyright © 2024 Pesona Wisata.<br>Website developed by: Group 4</p>
         </div>
     </section>
+    <script>
+        function setNama(nama) {
+            document.getElementById('nama_input').value = nama;
+        }
+    </script>
 </body>
 </html>
