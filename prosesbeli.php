@@ -59,6 +59,24 @@ $userWisata = mysqli_fetch_assoc($result);
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet"
     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <script>
+        function calculateTotal() {
+            // Ambil nilai dari input jumlah tiket dan harga per tiket
+            var jumlahTiket = document.getElementById('jumlah').value;
+            var hargaPerTiket = document.getElementById('hargaPerTiket').value;
+
+            // Pastikan nilai jumlah tiket dan harga per tiket berupa angka
+            jumlahTiket = parseInt(jumlahTiket);
+            hargaPerTiket = parseInt(hargaPerTiket);
+
+            // Hitung total pembayaran
+            var totalPembayaran = jumlahTiket * hargaPerTiket;
+
+            // Tampilkan total pembayaran di input total pembayaran
+            document.getElementById('totalPembayaran').value = totalPembayaran;
+        }
+    </script>
+
 </head>
 <body style="background-image: url(./asset/bgAbout.jpg);" class="register-body">
 
@@ -75,7 +93,7 @@ $userWisata = mysqli_fetch_assoc($result);
     <section class="registration">
         <div class="register-form">
             <h1>Silahkan <span>ISI</span></h1>
-            <form action="" method="POST">
+            <form action="prosespembelian.php" method="POST">
                 <div class="inputbox-register">
                     <input  type="text" value="<?php echo $userData['name'] ?>" required="Requiered" name="Name" readonly>
                 </div>
@@ -92,25 +110,25 @@ $userWisata = mysqli_fetch_assoc($result);
                 </div>
                 
                 <div class="inputbox-register">
-                    <input  type="text" value="<?php echo $userWisata['harga_wisata'] ?>" required="Requiered" name="harga" readonly>
+                    <input  type="text" id="hargaPerTiket" value="<?php echo $userWisata['harga_wisata'] ?>" required="Requiered" name="harga" readonly>
                 </div>
 
                 <div class="inputbox-register">
-                    <input  type="text" required="Requiered" name="jumlah">
+                    <input type="number" id="jumlah" name="jumlah" required="Requiered" oninput="calculateTotal()">
                     <span>Jumlah Tiket</span><br>
                 </div>
 
                 <h4>Metode Pembayaran</h4>
-                <input type="radio" name="Gender" value="Male" id="" required> Transfer &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-                <input type="radio" name="Gender" value="Female" id=""> Cash
+                <input type="radio" name="Gender" value="Transfer" id="" required> Transfer &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                <input type="radio" name="Gender" value="Cash" id=""> Cash
                 <h4>Tanggal Kunjung</h4>
                 <input type="date" name="Date" id="jadwal" required>
                 <h4>Total Pembayaran</h4>
-                    <input type="text" required="Requiered" name="harga"><br>
+                    <input type="text" id="totalPembayaran" required="Requiered" name="totalPembayaran" readonly><br>
                 <input type="checkbox" name="t&c" id="" checked required> I accept the Terms & Conditions.
                 <br> <br> 
 
-                <input type="submit" value="Signup" name="Submit" class="submitbtn">
+                <input type="submit" value="Confirmm" name="Submit" class="submitbtn">
             </form>
         </div>
     </section>
