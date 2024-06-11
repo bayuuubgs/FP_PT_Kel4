@@ -1083,12 +1083,11 @@ option {
     padding: 10px;
 }
 
-<<<<<<< HEAD
 .innerr {
     position: fixed;
     text-align: center;
     justify-content: center;
-=======
+}
 
 
 .rowitemstr {
@@ -1135,5 +1134,4 @@ option {
         display: flex;
         flex-direction: column;
     }
->>>>>>> c7076a69b5914b8430f6d805a456d0b9d972dda0
 }
