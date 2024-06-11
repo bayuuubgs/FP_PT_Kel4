@@ -1063,7 +1063,8 @@ body1 {
     border: 2px solid rgb(21, 74, 74);
 }
 
-.dropdown {
+select {
+    margin-left: 6px ;
     height: 100%;
     width: 95%;
     background-color: transparent;
@@ -1081,6 +1082,7 @@ option {
     font-size: 16px;
     padding: 10px;
 }
+
 
 
 .rowitemstr {
@@ -1101,14 +1103,7 @@ option {
     padding: 50px 10px;
     transition: all 0.7s ease 0s;
     cursor: pointer;
-    width: 100%; /* Make sure each box takes the full width */
-}
-
-.containertr-image img{
-    height: 100px;
-    width: 100px;
-    padding: 10px;
-    margin-bottom: 15px;
+    width: 100%; 
 }
 
 .containertr h4{

@@ -25,6 +25,8 @@ if (isset($_SESSION['nama'])) {
     header("location:login.php");
     exit; // Keluar dari skrip
 }
+$query = "SELECT * FROM `tb_pesanan` WHERE name LIKE '$nama_pengguna'";
+$hasil = mysqli_query($conn, $query);
 ?>
 
 <!DOCTYPE html>
@@ -54,27 +56,47 @@ if (isset($_SESSION['nama'])) {
             </ul>
         </nav>
     </div>
-    <section class="containertr">
         <div class="text">
             <h2>Riwayat Transaksi</h2>
         </div>
-        <div class="rowitemstr">
-            <div class="containertr">
-                <div class="containertr-image">
-                <img src="./asset/1a.jpg" alt="Flight Services">
-                </div>
-                    <h4>Flight Services</h4>
-                    <p>Arrival and Departure</p>
-                </div>
 
-                <div class="containertr">
-                <div class="containertr-image">
-                <img src="./asset/2a.jpg" alt="Food Services">
-                </div>
-                    <h4>Food Services</h4>
-                    <p>Catering</p>
-                </div>
+        <div class="rowitemstr">
+            <?php $nomor=1;
+            while ($data=mysqli_fetch_array ($hasil)){?>
+            <div class="containertr">
+            <h4>Id Transaksi <?php echo $data['id_pesanan']; ?></h4>                
+            <p><?php echo $data['name']; ?></p>
+            <p><?php echo $data['nama_wisata']; ?></p>
+            <p><?php echo $data['tanggal_kunjung']; ?></p><br>
+            <button class="btn-order">Lihat Selengkapnya!</button>
         </div>
-    </section>
+        <?php $nomor++; }?>
+    </div>
+    <div class="popup-login">
+        <form action="" method="POST">
+        <h2 style="font-size:30pt;">Masukkan Kode</h2>
+        <h3>Pilih Wisata :</h3><br>
+        <div class="dropdown">
+            <select name="Wisata">
+                <option value="Raja Ampat">Raja Ampat</option>
+                <option value="Labuan Bajo">Labuan Bajo</option>
+                <option value="Danau Toba">Danau Toba</option>
+                <option value="Pulau Merah">Pulau Merah</option>
+                <option value="Nusa Penida">Nusa Penida</option>
+                <option value="Banda Neira">Banda Neira</option>
+                <option value="Pulau Derawan">Pulau Derawan</option>
+                <option value="Pulau Bunaken">Pulau Bunaken</option>
+            </select>
+        </div>
+        <div class="inputbox-popup">
+            <input type="text" required="Required" name="Kode">
+            <span>Apa kodenya?</span><br>
+        </div>
+        <div class="btn-group">
+            <button class="info-btn exit-btn" type="button">Kembali</button>
+            <button type="submit" name="Loginkode" class="info-btn">Login</button>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
 </body>
 </html>
