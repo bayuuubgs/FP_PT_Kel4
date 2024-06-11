@@ -39,11 +39,17 @@ $hasil= mysqli_query ($conn, $query);
     <table class="table table-bordered">
         <thead class="thead-light">
             <tr>
-            <th scope="col">Id Pelanggan</th>
+            <th scope="col">No.</th>
+            <th scope="col">Id Pesanan</th>
             <th scope="col">Nama Pelanggan</th>
-            <th scope="col">Destinasi</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Wisata</th>
             <th scope="col">Harga</th>
-            <th scope="col">Jadwal</th>
+            <th scope="col">Jumlah</th>
+            <th scope="col">Pembayaran</th>
+            <th scope="col">Kedatangan</th>
+            <th scope="col">Total Harga</th>
             </tr>
         </thead>
         <tbody>
@@ -51,12 +57,18 @@ $hasil= mysqli_query ($conn, $query);
                 while ($data=mysqli_fetch_array ($hasil)){?>
                 <tr>
                     <th scope="row"> <?php echo $nomor; ?> </th>
+                    <td> <?php echo $data['id_pesanan']; ?> </td>
                     <td> <?php echo $data['name']; ?> </td>
-                    <td> <?php echo $data['destinasi']; ?> </td>
+                    <td> <?php echo $data['email']; ?> </td>
+                    <td> <?php echo $data['phone_number']; ?> </td>
+                    <td> <?php echo $data['nama_wisata']; ?> </td>
                     <td> <?php echo $data['harga']; ?> </td>
-                    <td> <?php echo $data['jadwal']; ?> </td>
-                    <!-- <td> <a href="ubahbarang.php?id=<?php echo $data['id_item'] ?>" class="text-info" >Edit</a>
-                    |<a style="color: red;" href="hapusbarang.php?id=<?php echo $data['id_item'] ?>">Delete</a> </td> -->
+                    <td> <?php echo $data['jumlah']; ?> </td>
+                    <td> <?php echo $data['pembayaran']; ?> </td>
+                    <td> <?php echo $data['tanggal_kunjung']; ?> </td>
+                    <td> <?php echo $data['total']; ?> </td>
+                    <!-- <td> <a href="ubahbarang.php?id=<?php echo $data['id_pesanan'] ?>" class="text-info" >Edit</a>
+                    |<a style="color: red;" href="hapusbarang.php?id=<?php echo $data['id_pesanan'] ?>">Delete</a> </td> -->
                 </tr>
             <?php $nomor++; }?>
         </tbody>

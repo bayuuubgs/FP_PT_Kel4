@@ -1,24 +1,6 @@
 <?php
 include_once ("koneksi.php");
-session_start();
-$nama_wisata = "";
-if (isset($_SESSION['destinasi'])) {
-    $name = $_SESSION['destinasi'];
-    $que = "SELECT nama_wisata FROM tb_wisata WHERE nama_wisata = '$name'";
-    $hasil1 = mysqli_query($conn, $que);
-
-    // Periksa apakah query berhasil dieksekusi
-    if ($hasil1) {
-        // Ambil hasil query
-        $row = mysqli_fetch_assoc($hasil1);
-        $nama_wisata = $row['nama_wisata'];
-    } else {
-        // Jika query gagal, tampilkan pesan error
-        echo "Error: " . mysqli_error($conn);
-    }
-
-}
-$query= "SELECT * FROM `tb_pesanan` WHERE nama_wisata LIKE '$nama_wisata'";
+$query= "SELECT * FROM tb_pesanan";
 $hasil= mysqli_query ($conn, $query);
 ?>
 
@@ -39,20 +21,20 @@ $hasil= mysqli_query ($conn, $query);
 </head>
 <body>
     <div class="atasan">
-        <nav>
-            <img src="./asset/Logo.png" class="logo" alt="Logo" title="Pesona Wisata">
-            <ul class="navbar">
-                <li>
-                    <a href="kelolawisata.php">Profile</a>
-                    <a href="#">Laporan</a>
-                    <a href="laporanwisata_pdf.php" target="_blank">PRINT</a>
-                    <a href="admin.php">Kembali</a>
-                </li>
-            </ul>
-        </nav>
+    <nav>
+        <img src="./asset/Logo.png" class="logo" alt="Logo" title="Pesona Wisata">
+        <ul class="navbar">
+            <li>
+                <a href="admin.php">Beranda</a>
+                <a href="laporan.php">Laporan Keseluruhan</a>
+                <a href="laporan_pdf.php" target="_blank" >PRINT</a>
+                <a href="./logout.php">Logout</a>
+            </li>
+        </ul>
+    </nav>
     </div>
     <div class="alert alert-dark text-center" role="alert">
-        <h2>Laporan Wisata <?php echo $nama_wisata; ?></h2>
+        <h2>Laporan Wisata Keseluruhan</h2>
     </div>
     <table class="table table-bordered">
         <thead class="thead-light">
@@ -68,6 +50,7 @@ $hasil= mysqli_query ($conn, $query);
             <th scope="col">Pembayaran</th>
             <th scope="col">Kedatangan</th>
             <th scope="col">Total Harga</th>
+            <th scope="col">Action</th>
             </tr>
         </thead>
         <tbody>
@@ -85,8 +68,8 @@ $hasil= mysqli_query ($conn, $query);
                     <td> <?php echo $data['pembayaran']; ?> </td>
                     <td> <?php echo $data['tanggal_kunjung']; ?> </td>
                     <td> <?php echo $data['total']; ?> </td>
-                    <!-- <td> <a href="ubahbarang.php?id=<?php echo $data['id_item'] ?>" class="text-info" >Edit</a>
-                    |<a style="color: red;" href="hapusbarang.php?id=<?php echo $data['id_item'] ?>">Delete</a> </td> -->
+                    <td> <a href="editpesanan.php?id=<?php echo $data['id_pesanan'] ?>" class="text-info" >Edit</a>
+                    |<a style="color: red;" href="hapuspesanan.php?id=<?php echo $data['id_pesanan'] ?>">Delete</a> </td>
                 </tr>
             <?php $nomor++; }?>
         </tbody>
