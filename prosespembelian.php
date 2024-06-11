@@ -16,7 +16,7 @@ VALUES ('$nama', '$email', '$telp', '$wisata', '$harga', '$total', '$tipe', '$da
 // Jalankan query dan cek apakah berhasil
 $hasil = mysqli_query($conn, $query);
 if ($hasil) {
-    header('location:index.php');
+    header('location:user.php');
 } else {
     echo "input data gagal";
 }
