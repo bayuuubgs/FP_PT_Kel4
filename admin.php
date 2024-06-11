@@ -104,18 +104,7 @@ if(isset($_POST['Loginkode'])) {
     </div>
     <div class="popup-login">
         <form action="" method="post">
-            <h2 style="font-size:30pt;">Masukkan Kode</h2>
-            <h3>Pilih Wisata :</h3><br>
-                <select name="Wisata">
-                    <option value="Raja Ampat">Raja Ampat</option>
-                    <option value="Labuan Bajo">Labuan Bajo</option>
-                    <option value="Danau Toba">Danau Toba</option>
-                    <option value="Pulau Merah">Pulau Merah</option>
-                    <option value="Nusa Penida">Nusa Penida</option>
-                    <option value="Banda Neira">Banda Neira</option>
-                    <option value="Pulau Derawan">Pulau Derawan</option>
-                    <option value="Pulau Bunaken">Pulau Bunaken</option>
-                </select>
+            <h2 style="font-size:30pt;">Transaksi</h2>
                 <div class="inputbox-popup">
                     <input type="text" required="Required" name="Kode">
                     <span>Apa kodenya?</span><br>
