@@ -56,45 +56,37 @@ $hasil = mysqli_query($conn, $query);
             </ul>
         </nav>
     </div>
-        <div class="text">
+    <div class="text">
             <h2>Riwayat Transaksi</h2>
-        </div>
+    </div>
 
-        <div class="rowitemstr">
-            <?php $nomor=1;
-            while ($data=mysqli_fetch_array ($hasil)){?>
-            <div class="containertr">
+    <div class="rowitemstr">
+        <?php $nomor=1;
+        while ($data=mysqli_fetch_array ($hasil)){?>
+        <div class="containertr">
             <h4>Id Transaksi <?php echo $data['id_pesanan']; ?></h4>                
             <p><?php echo $data['name']; ?></p>
             <p><?php echo $data['nama_wisata']; ?></p>
             <p><?php echo $data['tanggal_kunjung']; ?></p><br>
-            <button class="btn-order">Lihat Selengkapnya!</button>
+            <button class="btn-order" data-id="<?php echo $data['id_pesanan']; ?>">Lihat Selengkapnya!</button>
         </div>
         <?php $nomor++; }?>
     </div>
-    <div class="popup-login">
+    <div class="popup-riwayat">
         <form action="" method="POST">
-        <h2 style="font-size:30pt;">Masukkan Kode</h2>
-        <h3>Pilih Wisata :</h3><br>
-        <div class="dropdown">
-            <select name="Wisata">
-                <option value="Raja Ampat">Raja Ampat</option>
-                <option value="Labuan Bajo">Labuan Bajo</option>
-                <option value="Danau Toba">Danau Toba</option>
-                <option value="Pulau Merah">Pulau Merah</option>
-                <option value="Nusa Penida">Nusa Penida</option>
-                <option value="Banda Neira">Banda Neira</option>
-                <option value="Pulau Derawan">Pulau Derawan</option>
-                <option value="Pulau Bunaken">Pulau Bunaken</option>
-            </select>
-        </div>
-        <div class="inputbox-popup">
-            <input type="text" required="Required" name="Kode">
-            <span>Apa kodenya?</span><br>
-        </div>
+        <h2 style="font-size:30pt;">Transaksi</h2>
+        <!-- <span class="info">Id Transaksi : <?php echo $data['id_pesanan']; ?></span>
+        <span class="info">Nama : <?php echo $data['name']; ?></span>
+        <span class="info">Email : <?php echo $data['email']; ?></span>
+        <span class="info">No Telepon : <?php echo $data['phone_number']; ?></span>
+        <span class="info">Nama Wisata : <?php echo $data['nama_wisata']; ?></span>
+        <span class="info">Harga Tiket : <?php echo $data['harga']; ?></span>
+        <span class="info">Jumlah Pembelian : <?php echo $data['jumlah']; ?></span>
+        <span class="info">Total Harga : <?php echo $data['total']; ?></span>
+        <span class="info">Pembayaran : <?php echo $data['pembayaran']; ?></span>
+        <span class="info">Tanggal Kunjung : <?php echo $data['tanggal_kunjung']; ?></span> -->
         <div class="btn-group">
             <button class="info-btn exit-btn" type="button">Kembali</button>
-            <button type="submit" name="Loginkode" class="info-btn">Login</button>
         </div>
     </div>
     <script src="./js/script.js"></script>
