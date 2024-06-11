@@ -49,7 +49,7 @@ if (isset($_SESSION['nama'])) {
         <ul class="navbar">
             <li>
                 <a href="#">Beranda</a>
-                <a href="#">Laporan</a>
+                <a href="laporanowner.php">Laporan</a>
                 <a href=".#">Pengaturan</a>
                 <a href="./logout.php">Logout</a>
                 <a href="#"><i class="fa-solid fa-user"></i></a>

@@ -93,7 +93,6 @@ if(isset($_POST['Loginkode'])) {
                     <li>
                         <a href="#">Beranda</a>
                         <a class="start">Kelola Wisata</a>
-                        <a href="laporan.php">Laporan Keseluruhan</a>
                         <a href="./logout.php">Logout</a>
                     </li>
                 </ul>
