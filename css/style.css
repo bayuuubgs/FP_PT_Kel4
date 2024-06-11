@@ -1083,6 +1083,11 @@ option {
     padding: 10px;
 }
 
+.innerr {
+    position: fixed;
+    text-align: center;
+    justify-content: center;
+}
 
 
 .rowitemstr {
