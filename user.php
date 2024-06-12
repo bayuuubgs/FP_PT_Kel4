@@ -59,7 +59,6 @@ if (isset($_SESSION['nama'])) {
                 <li>
                 <a href="#home">Beranda</a>
                 <a href="#locationsuser">Destinasi</a>
-                <a href="#package">Packages</a>
                 <a href="./riwayattransaksi.php">Riwayat Transaksi</a>
                 <a href="editprofile.php">Edit Profile</a>
                 <a href="./logout.php">Logout</a>
@@ -83,36 +82,11 @@ if (isset($_SESSION['nama'])) {
     </div>
     <div class="rowitems">
         <div class="container-box">
-            <div class="container-image">
-                <img src="./asset/1a.jpg" alt="Flight Services">
-            </div>
-                <h4>Flight Services</h4>
-                <p>Arrival and Departure</p>
-            </div>
-        
-            <div class="container-box">
-            <div class="container-image">
-            <img src="./asset/2a.jpg" alt="Food Services">
-            </div>
-                <h4>Food Services</h4>
-                <p>Catering</p>
-            </div>
-
-            <div class="container-box">
-            <div class="container-image">
-                <img src="./asset/3a.jpg" alt="Travel Services">
-            </div>
-                <h4>Travel Services</h4>
-                <p>Pick-up/drop</p>
-            </div>
-
-            <div class="container-box">
-            <div class="container-image">
-                <img src="./asset/4a.jpg" alt="Hotel Services">
-            </div>
-                <h4>Hotel Services</h4>
-                <p>Check-in/out</p>
-            </div>
+        <div class="container-image">
+           <img src="./asset/1a.png" alt="Flight Services">
+        </div>
+            <h4>Holiday Services</h4>
+            <p>Online Ticket Booking</p>
         </div>
     </div>
 </section>
@@ -181,7 +155,7 @@ if (isset($_SESSION['nama'])) {
 
 <!-- Packages -->
 
-<section class="package" id="package">
+<!-- <section class="package" id="package">
     <div class="package-title">
         <h2>Packages</h2>
     </div>
@@ -272,7 +246,7 @@ if (isset($_SESSION['nama'])) {
 
     </div>
 
-</section>
+</section> -->
 
 <!-- Newsletter -->
 
@@ -308,10 +282,7 @@ if (isset($_SESSION['nama'])) {
             <div class="footlinks">
                 <h4>Connect</h4>
                 <div class="social">
-                    <a href="registertrial.php"><i class='bx bxl-facebook'></i></a>
-                    <a href="#"><i class='bx bxl-instagram' ></i></a>
-                    <a href="#"><i class='bx bxl-twitter' ></i></a>
-                    <a href="#"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/NovallFirmansyah/Project-UASS.git" target="_blank"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
             

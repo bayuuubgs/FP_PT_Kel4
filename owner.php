@@ -50,13 +50,7 @@ if (isset($_SESSION['nama'])) {
         <ul class="navbar">
             <li>
                 <a href="#">Beranda</a>
-<<<<<<< HEAD
-                <a href="#">Laporan</a>
-                <a href="#">Pengaturan</a>
-=======
                 <a href="laporanowner.php">Laporan</a>
-                <a href=".#">Pengaturan</a>
->>>>>>> c7076a69b5914b8430f6d805a456d0b9d972dda0
                 <a href="./logout.php">Logout</a>
                 <a href="#"><i class="fa-solid fa-user"></i></a>
             </li>

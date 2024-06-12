@@ -1123,7 +1123,6 @@ option {
 }
 
 .containertr:hover{
-    transform: translateX(3px);
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
     border: 1px solid transparent;
     border-radius: 0px;
@@ -1178,7 +1177,7 @@ option {
     margin-top: 10px;
     padding: 15px 0 7px;
 }
-.popup-riwayat .btn-group .info-btn {
+.popup-riwayat .btn-group .ri-btn {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -1195,11 +1194,11 @@ option {
     cursor: pointer;
     transition: 0.5s;
 }
-.popup-riwayat .btn-group .info-btn:nth-child(1) {
+.popup-riwayat .btn-group .ri-btn:nth-child(1) {
     background: transparent;
     color: rgb(21, 74, 74);
 }
-.popup-riwayat .btn-group .info-btn:nth-child(1):hover {
+.popup-riwayat .btn-group .ri-btn:nth-child(1):hover {
     background: rgb(21, 74, 74);
     color: white;
 }

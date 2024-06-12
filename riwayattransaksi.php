@@ -25,7 +25,7 @@ if (isset($_SESSION['nama'])) {
     header("location:login.php");
     exit; // Keluar dari skrip
 }
-$query = "SELECT * FROM `tb_pesanan` WHERE name LIKE '$nama_pengguna'";
+$query = "SELECT * FROM tb_pesanan WHERE name LIKE '$nama_pengguna'";
 $hasil = mysqli_query($conn, $query);
 ?>
 
@@ -42,53 +42,57 @@ $hasil = mysqli_query($conn, $query);
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-   
 </head>
-
 <body>
-    <div class="atasan">
-        <nav>
-            <img src="./asset/Logo.png" class="logo" alt="Logo" title="Pesona Wisata">
-            <ul class="navbar">
-                <li>
-                    <a href="./user.php">Beranda</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    <div class="text">
+    <div class="mainn">
+        <div class="atasan">
+            <nav>
+                <img src="./asset/Logo.png" class="logo" alt="Logo" title="Pesona Wisata">
+                <ul class="navbar">
+                    <li>
+                        <a href="./user.php">Beranda</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="text">
             <h2>Riwayat Transaksi</h2>
+        </div>
+
+        <div class="rowitemstr">
+            <?php $nomor=1;
+            while ($data=mysqli_fetch_array ($hasil)){?>
+            <div class="containertr">
+                <h4>Id Transaksi <?php echo $data['id_pesanan']; ?></h4>                
+                <p><?php echo $data['name']; ?></p>
+                <p><?php echo $data['nama_wisata']; ?></p>
+                <p><?php echo $data['tanggal_kunjung']; ?></p><br>
+                <button class="btn-order" data-id="<?php echo $data['id_pesanan']; ?>" type="button">Lihat Selengkapnya!</button>
+            </div>
+            <?php $nomor++; }?>
+        </div>
     </div>
 
-    <div class="rowitemstr">
-        <?php $nomor=1;
-        while ($data=mysqli_fetch_array ($hasil)){?>
-        <div class="containertr">
-            <h4>Id Transaksi <?php echo $data['id_pesanan']; ?></h4>                
-            <p><?php echo $data['name']; ?></p>
-            <p><?php echo $data['nama_wisata']; ?></p>
-            <p><?php echo $data['tanggal_kunjung']; ?></p><br>
-            <button class="btn-order" data-id="<?php echo $data['id_pesanan']; ?>">Lihat Selengkapnya!</button>
-        </div>
-        <?php $nomor++; }?>
-    </div>
+
     <div class="popup-riwayat">
         <form action="" method="POST">
-        <h2 style="font-size:30pt;">Transaksi</h2>
-        <!-- <span class="info">Id Transaksi : <?php echo $data['id_pesanan']; ?></span>
-        <span class="info">Nama : <?php echo $data['name']; ?></span>
-        <span class="info">Email : <?php echo $data['email']; ?></span>
-        <span class="info">No Telepon : <?php echo $data['phone_number']; ?></span>
-        <span class="info">Nama Wisata : <?php echo $data['nama_wisata']; ?></span>
-        <span class="info">Harga Tiket : <?php echo $data['harga']; ?></span>
-        <span class="info">Jumlah Pembelian : <?php echo $data['jumlah']; ?></span>
-        <span class="info">Total Harga : <?php echo $data['total']; ?></span>
-        <span class="info">Pembayaran : <?php echo $data['pembayaran']; ?></span>
-        <span class="info">Tanggal Kunjung : <?php echo $data['tanggal_kunjung']; ?></span> -->
-        <div class="btn-group">
-            <button class="info-btn exit-btn" type="button">Kembali</button>
-        </div>
+            <h2 style="font-size:30pt;">Detail Transaksi</h2>
+            <span class="info" id="info-id"> </span><br>
+            <span class="info" id="info-name"></span><br>
+            <span class="info" id="info-email"></span><br>
+            <span class="info" id="info-phone"> </span><br>
+            <span class="info" id="info-wisata"></span><br>
+            <span class="info" id="info-price"></span><br>
+            <span class="info" id="info-quantity"></span> <br>
+            <span class="info" id="info-total"></span><br>
+            <span class="info" id="info-payment"></span><br>
+            <span class="info" id="info-date"></span><br>
+            <div class="btn-group">
+                <button class="ri-btn" type="button">Kembali</button>
+            </div>
+        </form>
     </div>
-    <script src="./js/script.js"></script>
+
+    <script src="./js/scriptriwayat.js"></script>
 </body>
 </html>

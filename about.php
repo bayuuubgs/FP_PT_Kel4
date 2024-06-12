@@ -22,7 +22,6 @@
                 <li>
                 <a href="./index.php">Beranda</a>
                 <a href="./index.php#locations">Destinasi</a>
-                <a href="./index.php#package">Packages</a>
                 <a href="./about.php">About Us</a>
                 <a href="./login.php">Login</a>
                 </li>
@@ -35,16 +34,13 @@
             <div class="abt-text">
                 <h1>About <span>Me</span></h1>
                 <p>Perkenalkan nama saya Moh. Bayu Bagus Sutigar dengan NPM 22082010204, Saya berasal dari Universitas Pembangunan Nasional "Veteran" Jawa Timur.</p>
-                <a href="https://www.linkedin.com/in/mohdrahil101" class="connectbtn" target="_blank">Connect with me!</a>
+                <a href="#" class="connectbtn" target="_blank">Connect with me!</a>
 
                 <div class="connect-section">
 
                     <div class="social-icons">
-                        <a href="" target="_blank"><i class='bx bxl-facebook'></i></a>
                         <a href="https://www.instagram.com/__bayubgs/" target="_blank"><i class='bx bxl-instagram' ></i></a>
-                        <a href="" target="_blank"><i class='bx bxl-twitter' ></i></a>
                         <a href="" target="_blank"><i class='bx bxl-linkedin' ></i></a>
-                        <a href="" target="_blank"><i class='bx bxl-youtube' ></i></a>
                         <a href="" target="_blank"><i class='bx bxl-github'></i></a>
                     </div>
 
@@ -59,14 +55,12 @@
             <div class="abt-text">
                 <h1>About <span>Me</span></h1>
                 <p>Panggilan ke petualangan, ke kreativitas, ke kebebasan yang tak terhingga. Panggilan dari dunia luar yang menanti untuk dijelajahi. Inilah Pesona Wisata</p>
-                <a href="https://www.linkedin.com/in/mohdrahil101" class="connectbtn" target="_blank">Connect with me!</a>
+                <a href="#" class="connectbtn" target="_blank">Connect with me!</a>
 
                 <div class="connect-section">
 
                     <div class="social-icons">
-                        <a href="" target="_blank"><i class='bx bxl-facebook'></i></a>
                         <a href="https://www.instagram.com/_lynx.57" target="_blank"><i class='bx bxl-instagram' ></i></a>
-                        <a href="" target="_blank"><i class='bx bxl-twitter' ></i></a>
                         <a href="" target="_blank"><i class='bx bxl-linkedin' ></i></a>
                         <a href="https://www.youtube.com/@VarGaming57" target="_blank"><i class='bx bxl-youtube' ></i></a>
                         <a href="" target="_blank"><i class='bx bxl-github'></i></a>
@@ -82,16 +76,13 @@
             <div class="abt-text">
                 <h1>About <span>Me</span></h1>
                 <p>Perkenalkan nama saya Adrian Noval Firmansyah dengan NPM 22082010214, Saya berasal dari Universitas Pembangunan Nasional "Veteran" Jawa Timur.</p>
-                <a href="https://www.linkedin.com/in/mohdrahil101" class="connectbtn" target="_blank">Connect with me!</a>
+                <a href="https://github.com/NovallFirmansyah" class="connectbtn" target="_blank">Connect with me!</a>
 
                 <div class="connect-section">
 
                     <div class="social-icons">
-                        <a href="" target="_blank"><i class='bx bxl-facebook'></i></a>
                         <a href="https://www.instagram.com/_novalfirmansyah/" target="_blank"><i class='bx bxl-instagram' ></i></a>
-                        <a href="" target="_blank"><i class='bx bxl-twitter' ></i></a>
                         <a href="" target="_blank"><i class='bx bxl-linkedin' ></i></a>
-                        <a href="" target="_blank"><i class='bx bxl-youtube' ></i></a>
                         <a href="https://github.com/NovallFirmansyah" target="_blank"><i class='bx bxl-github'></i></a>
                     </div>
                 </div>
@@ -120,13 +111,7 @@
             <div class="footlinks">
                 <h4>Connect</h4>
                 <div class="social">
-                    <a href="https://www.facebook.com/mohd.rahil.blogger" target="_blank"><i class='bx bxl-facebook'></i></a>
-                    <a href="https://www.instagram.com/mohdrahil101" target="_blank"><i class='bx bxl-instagram' ></i></a>
-                    <a href="https://www.twitter.com/mohdrahil101" target="_blank"><i class='bx bxl-twitter' ></i></a>
-                    <a href="https://www.linkedin.com/in/mohdrahil101" target="_blank"><i class='bx bxl-linkedin' ></i></a>
-                    <a href="https://www.youtube.com/techdollarz" target="_blank"><i class='bx bxl-youtube' ></i></a>
-                    <a href="https://www.mohdrahil.wordpress.com" target="_blank"><i class='bx bxl-wordpress' ></i></a>
-                    <a href="https://www.github.com/mohdrahil101" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://github.com/NovallFirmansyah/Project-UASS.git" target="_blank"><i class='bx bxl-github'></i></a>
                 </div>
             </div>
             

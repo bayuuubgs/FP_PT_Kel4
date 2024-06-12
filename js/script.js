@@ -15,3 +15,4 @@ exitBtn.onclick = () => {
     main.classList.remove('active');
     popupInfo.classList.remove('active');
 };
+

@@ -25,7 +25,7 @@ $hasil= mysqli_query ($conn, $query);
         <img src="./asset/Logo.png" class="logo" alt="Logo" title="Pesona Wisata">
         <ul class="navbar">
             <li>
-                <a href="admin.php">Beranda</a>
+                <a href="owner.php">Beranda</a>
                 <a href="laporan.php">Laporan Keseluruhan</a>
                 <a href="laporan_pdf.php" target="_blank" >PRINT</a>
                 <a href="./logout.php">Logout</a>
