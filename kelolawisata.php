@@ -18,7 +18,7 @@ if (isset($_SESSION['destinasi'])) {
     }
 
 }
-$query= "SELECT * FROM `tb_wisata` WHERE nama_wisata LIKE '$nama_wisata'";
+$query= "SELECT * FROM tb_wisata WHERE nama_wisata LIKE '$nama_wisata'";
 $hasil= mysqli_query ($conn, $query);
 ?>
 
@@ -31,13 +31,7 @@ $hasil= mysqli_query ($conn, $query);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelola Wisata</title>
     <link rel="icon" href="./asset/Logo.png">
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <?php while ($data=mysqli_fetch_array($hasil)) { ?>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -51,7 +45,9 @@ $hasil= mysqli_query ($conn, $query);
 
         <ul class="navbar">
             <li>
-            <a href="./user.php">Kembali</a>
+            <a href="#">Profile</a>
+                    <a href="laporanwisata.php">Laporan</a>
+                    <a href="admin.php">Kembali</a>
             </li>
         </ul>
     </nav>
@@ -59,9 +55,9 @@ $hasil= mysqli_query ($conn, $query);
     <?php while ($data=mysqli_fetch_array($hasil)) { ?>
     <section class="registration">
         <div class="register-form">
-            <h1>Edit <span>Profile</span></h1>
-            <form action="editpr.php" method="POST">
-                <input type="hidden" name="id" value="<?php echo $data['nama_wisata'] ?>">
+            <h1>Kelola Wisata <span><?php echo $nama_wisata; ?></span></h1>
+            <form action="editwisata.php" method="POST">
+                <input type="hidden" name="id" value="<?php echo $data['id_wisata'] ?>">
                 <div class="inputbox-register">
                     <input  type="text" value="<?php echo $data['nama_wisata'] ?>" required="Requiered" name="nama" readonly>
                 </div>
