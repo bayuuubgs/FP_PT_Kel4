@@ -19,6 +19,45 @@ if(isset($_POST['Login'])) {
         echo "Wisata tidak ditemukan"; // Tambahkan pesan kesalahan jika wisata tidak ditemukan
     }
 }
+$resultRajaAmpat = mysqli_query($conn, "SELECT deskripsi,jadwal FROM `tb_wisata` WHERE nama_wisata='Raja Ampat'");
+$rowRajaAmpat = mysqli_fetch_assoc($resultRajaAmpat);
+$deskRajaAmpat = $rowRajaAmpat['deskripsi'];
+$jadwalRajaAmpat = $rowRajaAmpat['jadwal'];
+
+$resultLabuanBajo = mysqli_query($conn, "SELECT deskripsi,jadwal FROM `tb_wisata` WHERE nama_wisata='Labuan Bajo'");
+$rowLabuanBajo = mysqli_fetch_assoc($resultLabuanBajo);
+$deskLabuanBajo = $rowLabuanBajo['deskripsi'];
+$jadwalLabuanBajo = $rowLabuanBajo['jadwal'];
+
+$resultDanauToba = mysqli_query($conn, "SELECT deskripsi,jadwal FROM `tb_wisata` WHERE nama_wisata='Danau Toba'");
+$rowDanauToba = mysqli_fetch_assoc($resultDanauToba);
+$deskDanauToba = $rowDanauToba['deskripsi'];
+$jadwalDanauToba = $rowDanauToba['jadwal'];
+
+$resultPulauMerah = mysqli_query($conn, "SELECT deskripsi,jadwal FROM `tb_wisata` WHERE nama_wisata='Pulau Merah'");
+$rowPulauMerah = mysqli_fetch_assoc($resultPulauMerah);
+$deskPulauMerah = $rowPulauMerah['deskripsi'];
+$jadwalPulauMerah = $rowPulauMerah['jadwal'];
+
+$resultNusaPenida = mysqli_query($conn, "SELECT deskripsi,jadwal FROM `tb_wisata` WHERE nama_wisata='Nusa Penida'");
+$rowNusaPenida = mysqli_fetch_assoc($resultNusaPenida);
+$deskNusaPenida = $rowNusaPenida['deskripsi'];
+$jadwalNusaPenida = $rowNusaPenida['jadwal'];
+
+$resultBandaNeira = mysqli_query($conn, "SELECT deskripsi,jadwal FROM `tb_wisata` WHERE nama_wisata='Banda Neira'");
+$rowBandaNeira = mysqli_fetch_assoc($resultBandaNeira);
+$deskBandaNeira = $rowBandaNeira['deskripsi'];
+$jadwalBandaNeira = $rowBandaNeira['jadwal'];
+
+$resultPulauDerawan = mysqli_query($conn, "SELECT deskripsi,jadwal FROM `tb_wisata` WHERE nama_wisata='Pulau Derawan'");
+$rowPulauDerawan = mysqli_fetch_assoc($resultPulauDerawan);
+$deskPulauDerawan = $rowPulauDerawan['deskripsi'];
+$jadwalPulauDerawan = $rowPulauDerawan['jadwal'];
+
+$resultPulauBunaken = mysqli_query($conn, "SELECT deskripsi,jadwal FROM `tb_wisata` WHERE nama_wisata='Pulau Bunaken'");
+$rowPulauBunaken = mysqli_fetch_assoc($resultPulauBunaken);
+$deskPulauBunaken = $rowPulauBunaken['deskripsi'];
+$jadwalPulauBunaken = $rowPulauBunaken['jadwal'];
 ?>
 
 
@@ -58,7 +97,8 @@ if(isset($_POST['Login'])) {
             </div>
             <div class="location-detail" id="Papua">
                 <h1>Raja Ampat</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima autem quaerat perspiciatis ab laboriosam, similique veritatis nostrum mollitia vel odio dolor rerum a ducimus sequi ipsum incidunt numquam odit expedita!</p>
+                <p><?php echo $deskRajaAmpat; ?></p>
+                <p>Jadwal: <?php echo $jadwalRajaAmpat; ?></p>
                 <div class="location-img">
                     <img src="./asset/papat.jpg" alt="">
                 </div>
@@ -67,7 +107,8 @@ if(isset($_POST['Login'])) {
 
             <div class="location-detail" id="Nusa Tenggara Timur">
                 <h1>Labuan Bajo</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis suscipit ut, ullam nostrum magni ipsum, ea tempora mollitia minima eaque inventore, repellendus velit omnis delectus eum corrupti aspernatur placeat a.</p>
+                <p><?php echo $deskLabuanBajo; ?></p>
+                <p>Jadwal: <?php echo $jadwalLabuanBajo; ?></p>
                 <div class="location-img">
                     <img src="./asset/labuan.jpg" alt="">
                 </div>
@@ -76,8 +117,8 @@ if(isset($_POST['Login'])) {
 
             <div class="location-detail" id="Sumatra Utara">
                 <h1>Danau Toba</h1>
-                
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nihil, ex est similique commodi, mollitia reiciendis dignissimos, magnam hic dolorem fugit ipsam id omnis qui natus maiores alias assumenda. Numquam.</p>
+                <p><?php echo $deskDanauToba; ?></p>
+                <p>Jadwal: <?php echo $jadwalDanauToba; ?></p>
                 <div class="location-img">
                     <img src="./asset/tobi.jpg" alt="">
                 </div>
@@ -86,7 +127,8 @@ if(isset($_POST['Login'])) {
 
             <div class="location-detail" id="Jawa Timur">
                 <h1>Pulau Merah</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ducimus corrupti odio ex, culpa quasi aliquid! Vel optio labore iure sapiente ratione earum, cupiditate ut blanditiis, nisi inventore quod id?</p>
+                <p><?php echo $deskPulauMerah; ?></p>
+                <p>Jadwal: <?php echo $jadwalPulauMerah; ?></p>
                 <div class="location-img">
                     <img src="./asset/abang.jpg" alt="">
                 </div>
@@ -95,8 +137,8 @@ if(isset($_POST['Login'])) {
 
             <div class="location-detail" id="Bali">
                 <h1>Nusa Penida</h1>
-                
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit porro dignissimos, beatae quae impedit error eos quaerat, vel dolor nulla dolores laboriosam vitae? Quod, labore praesentium ex autem quas iure?</p>
+                <p><?php echo $deskNusaPenida; ?></p>
+                <p>Jadwal: <?php echo $jadwalNusaPenida; ?></p>
                 <div class="location-img">
                     <img src="./asset/penida.jpg" alt="">
                 </div>
@@ -105,7 +147,8 @@ if(isset($_POST['Login'])) {
 
             <div class="location-detail" id="Maluku">
                 <h1>Banda Neira</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum alias ad optio corrupti quidem, autem magni maiores laborum odit aspernatur distinctio magnam, tempora quisquam? Architecto exercitationem soluta consequatur iure numquam.</p>
+                <p><?php echo $deskBandaNeira; ?></p>
+                <p>Jadwal: <?php echo $jadwalBandaNeira; ?></p>
                 <div class="location-img">
                     <img src="./asset/bandar.jpg" alt="">
                 </div>
@@ -114,7 +157,8 @@ if(isset($_POST['Login'])) {
 
             <div class="location-detail" id="Kalimantan Timur">
                 <h1>Pulau Derawan</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda debitis quasi doloribus delectus cumque vitae. Placeat a vel magni aperiam quia tenetur veniam esse dolores quasi dicta, eligendi, atque quibusdam?</p>
+                <p><?php echo $deskPulauDerawan; ?></p>
+                <p>Jadwal: <?php echo $jadwalPulauDerawan; ?></p>
                 <div class="location-img">
                     <img src="./asset/dera.jpg" alt="">
                 </div>
@@ -123,7 +167,8 @@ if(isset($_POST['Login'])) {
 
             <div class="location-detail" id="Sulawesi Utara">
                 <h1>Pulau Bunaken</h1>
-                <p>The capital of one of the most powerful ancient empires in the world, Rome is a fascinating place that has inspired people to visit for millennia. With incredible works of art, a leisurely pace of life and world-renowned cuisine, the Eternal City is worth a visit at least once, though it would take a lifetime to see all it has to offer.</p>
+                <p><?php echo $deskPulauBunaken; ?></p>
+                <p>Jadwal: <?php echo $jadwalPulauBunaken; ?></p>
                 <div class="location-img">
                     <img src="./asset/buna.jpg" alt="">
                 </div>

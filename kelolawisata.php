@@ -30,7 +30,6 @@ $hasil= mysqli_query ($conn, $query);
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <?php while ($data=mysqli_fetch_array($hasil)) { ?>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
@@ -44,7 +43,7 @@ $hasil= mysqli_query ($conn, $query);
 
         <ul class="navbar">
             <li>
-            <a href="./user.php">Kembali</a>
+            <a href="./admin.php">Kembali</a>
             </li>
         </ul>
     </nav>
@@ -52,6 +51,7 @@ $hasil= mysqli_query ($conn, $query);
         <div class="register-form">
             <h1>Edit <span>Profile</span></h1>
             <form action="editpr.php" method="POST">
+            <?php while ($data=mysqli_fetch_array($hasil)) { ?>
                 <input type="hidden" name="id" value="<?php echo $data['nama_wisata'] ?>">
                 <div class="inputbox-register">
                     <input  type="text" value="<?php echo $data['nama_wisata'] ?>" required="Requiered" name="wisata" readonly>
