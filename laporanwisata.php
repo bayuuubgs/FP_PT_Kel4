@@ -58,7 +58,6 @@ $hasil= mysqli_query ($conn, $query);
         <thead class="thead-light">
             <tr>
             <th scope="col">No.</th>
-            <th scope="col">Id Pesanan</th>
             <th scope="col">Nama Pelanggan</th>
             <th scope="col">Email</th>
             <th scope="col">Phone Number</th>
@@ -75,7 +74,6 @@ $hasil= mysqli_query ($conn, $query);
                 while ($data=mysqli_fetch_array ($hasil)){?>
                 <tr>
                     <th scope="row"> <?php echo $nomor; ?> </th>
-                    <td> <?php echo $data['id_pesanan']; ?> </td>
                     <td> <?php echo $data['name']; ?> </td>
                     <td> <?php echo $data['email']; ?> </td>
                     <td> <?php echo $data['phone_number']; ?> </td>
