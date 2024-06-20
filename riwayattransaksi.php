@@ -89,6 +89,7 @@ $hasil = mysqli_query($conn, $query);
             <span class="info" id="info-date"></span><br>
             <div class="btn-group">
                 <button class="ri-btn" type="button">Kembali</button>
+                <button class="print" onclick="window.print()">CETAK</button>
             </div>
         </form>
     </div>
