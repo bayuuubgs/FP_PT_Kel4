@@ -45,9 +45,10 @@ $hasil= mysqli_query ($conn, $query);
 
         <ul class="navbar">
             <li>
-            <a href="#">Profile</a>
-                    <a href="laporanwisata.php">Laporan</a>
-                    <a href="admin.php">Kembali</a>
+                <a href="#">Profile</a>
+                <a href="statuspesanan.php">Status Transaksi</a>
+                <a href="laporanwisata.php">Laporan</a>
+                <a href="admin.php">Kembali</a>
             </li>
         </ul>
     </nav>

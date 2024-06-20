@@ -18,14 +18,14 @@ if (isset($_SESSION['destinasi'])) {
     }
 
 }
-$query= "SELECT * FROM `tb_pesanan` WHERE nama_wisata LIKE '$nama_wisata'AND status = 'Selesai'";
+$query= "SELECT * FROM `tb_pesanan` WHERE nama_wisata LIKE '$nama_wisata' AND status = 'Sedang Diproses'";
 $hasil= mysqli_query ($conn, $query);
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Data Pesanan</title>
+    <title>Status Pesanan</title>
     <link rel="icon" href="./asset/Logo.png">
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -44,8 +44,8 @@ $hasil= mysqli_query ($conn, $query);
             <ul class="navbar">
                 <li>
                     <a href="kelolawisata.php">Profile</a>
-                    <a href="statuspesanan.php">Status Transaksi</a>
-                    <a href="#">Laporan</a>
+                    <a href="#">Status Transaksi</a>
+                    <a href="laporanwisata.php">Laporan</a>
                     <a href="laporanwisata_pdf.php" target="_blank">PRINT</a>
                     <a href="admin.php">Kembali</a>
                 </li>
@@ -53,7 +53,7 @@ $hasil= mysqli_query ($conn, $query);
         </nav>
     </div>
     <div class="alert alert-dark text-center" role="alert">
-        <h2>Laporan Wisata <?php echo $nama_wisata; ?></h2>
+        <h2>Laporan Status Pesanan <?php echo $nama_wisata; ?></h2>
     </div>
     <table class="table table-bordered">
         <thead class="thead-light">
@@ -69,27 +69,30 @@ $hasil= mysqli_query ($conn, $query);
             <th scope="col">Kedatangan</th>
             <th scope="col">Total Harga</th>
             <th scope="col">Status</th>
+            <th scope="col">Aksi</th>
             </tr>
         </thead>
         <tbody>
-            <?php $nomor=1;
-                while ($data=mysqli_fetch_array ($hasil)){?>
-                <tr>
-                    <th scope="row"> <?php echo $nomor; ?> </th>
-                    <td> <?php echo $data['name']; ?> </td>
-                    <td> <?php echo $data['email']; ?> </td>
-                    <td> <?php echo $data['phone_number']; ?> </td>
-                    <td> <?php echo $data['nama_wisata']; ?> </td>
-                    <td> <?php echo $data['harga']; ?> </td>
-                    <td> <?php echo $data['jumlah']; ?> </td>
-                    <td> <?php echo $data['pembayaran']; ?> </td>
-                    <td> <?php echo $data['tanggal_kunjung']; ?> </td>
-                    <td> <?php echo $data['total']; ?> </td>
-                    <td> <?php echo $data['status']; ?> </td>
-                    <!-- <td> <a href="ubahbarang.php?id=<?php echo $data['id_item'] ?>" class="text-info" >Edit</a>
-                    |<a style="color: red;" href="hapusbarang.php?id=<?php echo $data['id_item'] ?>">Delete</a> </td> -->
-                </tr>
-            <?php $nomor++; }?>
+            <form action="prosespesanan.php" method="POST">
+                <?php $nomor=1;
+                    while ($data=mysqli_fetch_array ($hasil)){?>
+                    <tr>
+                        <th scope="row"> <?php echo $nomor; ?> </th>
+                        <td> <?php echo $data['name']; ?> </td>
+                        <td> <?php echo $data['email']; ?> </td>
+                        <td> <?php echo $data['phone_number']; ?> </td>
+                        <td> <?php echo $data['nama_wisata']; ?> </td>
+                        <td> <?php echo $data['harga']; ?> </td>
+                        <td> <?php echo $data['jumlah']; ?> </td>
+                        <td> <?php echo $data['pembayaran']; ?> </td>
+                        <td> <?php echo $data['tanggal_kunjung']; ?> </td>
+                        <td> <?php echo $data['total']; ?> </td>
+                        <td> <?php echo $data['status']; ?> </td>
+                        <!-- <td> <input type="submit" class="btn-order" <a href="prosespesanan.php?id=<?php echo $data['id_pesanan'] ?>" class="btn-order" >Proses</a> </td> -->
+                        <td> <a href="prosespesanan.php?id=<?php echo $data['id_pesanan'] ?>" class="btn-order" >Proses</a> </td>
+                    </tr>
+                <?php $nomor++; }?>
+            </form>
         </tbody>
     </table>
     <!-- Optional JavaScript -->

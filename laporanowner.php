@@ -49,6 +49,7 @@ $hasil= mysqli_query ($conn, $query);
             <th scope="col">Pembayaran</th>
             <th scope="col">Kedatangan</th>
             <th scope="col">Total Harga</th>
+            <th scope="col">Status</th>
             <th scope="col">Action</th>
             </tr>
         </thead>
@@ -66,6 +67,7 @@ $hasil= mysqli_query ($conn, $query);
                     <td> <?php echo $data['pembayaran']; ?> </td>
                     <td> <?php echo $data['tanggal_kunjung']; ?> </td>
                     <td> <?php echo $data['total']; ?> </td>
+                    <td> <?php echo $data['status']; ?> </td>
                     <td> <a href="editpesanan.php?id=<?php echo $data['id_pesanan'] ?>" class="text-info" >Edit</a>
                     |<a style="color: red;" href="hapuspesanan.php?id=<?php echo $data['id_pesanan'] ?>">Delete</a> </td>
                 </tr>
@@ -87,15 +89,15 @@ $hasil= mysqli_query ($conn, $query);
                     label: 'Jumlah Pesanan',
                     data: [
                         <?php 
-                        $jumlah_raja_ampat = mysqli_query($conn, "SELECT * FROM tb_pesanan WHERE nama_wisata='Raja Ampat'");
+                        $jumlah_raja_ampat = mysqli_query($conn, "SELECT jumlah FROM tb_pesanan WHERE nama_wisata='Raja Ampat'");
                         echo mysqli_num_rows($jumlah_raja_ampat);
                         ?>, 
                         <?php 
-                        $jumlah_labuan_bajo = mysqli_query($conn, "SELECT * FROM tb_pesanan WHERE nama_wisata='Labuan Bajo'");
+                        $jumlah_labuan_bajo = mysqli_query($conn, "SELECT jumlah FROM tb_pesanan WHERE nama_wisata='Labuan Bajo'");
                         echo mysqli_num_rows($jumlah_labuan_bajo);
                         ?>, 
                         <?php 
-                        $jumlah_danau_toba = mysqli_query($conn, "SELECT * FROM tb_pesanan WHERE nama_wisata='Danau Toba'");
+                        $jumlah_danau_toba = mysqli_query($conn, "SELECT jumlah FROM tb_pesanan WHERE nama_wisata='Danau Toba'");
                         echo mysqli_num_rows($jumlah_danau_toba);
                         ?>, 
                         <?php 
