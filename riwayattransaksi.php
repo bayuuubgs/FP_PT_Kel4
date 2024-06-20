@@ -27,6 +27,7 @@ if (isset($_SESSION['nama'])) {
 }
 $query = "SELECT * FROM tb_pesanan WHERE name LIKE '$nama_pengguna'";
 $hasil = mysqli_query($conn, $query);
+
 ?>
 
 <!DOCTYPE html>
@@ -89,10 +90,10 @@ $hasil = mysqli_query($conn, $query);
             <span class="info" id="info-date"></span><br>
             <div class="btn-group">
                 <button class="ri-btn" type="button">Kembali</button>
+                <button class="ri-btn" onclick="window.print()">CETAK</button>
             </div>
         </form>
     </div>
-
     <script src="./js/scriptriwayat.js"></script>
 </body>
 </html>
