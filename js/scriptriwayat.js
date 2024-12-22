@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         document.getElementById('info-total').textContent = `Total Harga: Rp.${data.total}`;
                         document.getElementById('info-payment').textContent = `Metode Pembayaran: ${data.pembayaran}`;
                         document.getElementById('info-date').textContent = `Tanggal Kunjung: ${data.tanggal_kunjung}`;
+                        document.getElementById('info-status').textContent = `Status: ${data.status}`;
                         main.classList.add('active');
                         popupRi.classList.add('active');
                     }

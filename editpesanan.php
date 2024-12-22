@@ -45,7 +45,7 @@ $hasil=mysqli_query($conn,$query);
 
         <ul class="navbar">
             <li>
-            <a href="./user.php">Beranda</a>
+            <a href="./owner.php">Beranda</a>
             </li>
         </ul>
     </nav>

@@ -88,8 +88,10 @@ $hasil = mysqli_query($conn, $query);
             <span class="info" id="info-total"></span><br>
             <span class="info" id="info-payment"></span><br>
             <span class="info" id="info-date"></span><br>
+            <span class="info" id="info-status"></span><br>
             <div class="btn-group">
                 <button class="ri-btn" type="button">Kembali</button>
+                <button class="ri-btn" onclick="window.print()">CETAK</button>
             </div>
         </form>
     </div>

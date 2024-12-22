@@ -2,6 +2,47 @@
 include_once("koneksi.php");
 session_start();
 
+function scrapePrice() {
+    // URL target
+    $url = "https://www.traveloka.com/en-id/hotel/search?spec=23-12-2024.24-12-2024.1.1.HOTEL_GEO.107217.Raja%20Ampat%20Regency.1"; // Ganti dengan URL yang valid
+
+    // Inisialisasi cURL
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+    ]);
+
+    $html = curl_exec($ch);
+
+    if (curl_errno($ch)) {
+        return "cURL Error: " . curl_error($ch);
+    }
+    curl_close($ch);
+
+    // Parsing HTML
+    $dom = new DOMDocument();
+    libxml_use_internal_errors(true); // Supaya tidak menampilkan error parsing
+    $dom->loadHTML($html);
+    libxml_clear_errors();
+
+    // Cari elemen <div> dengan kelas yang sesuai
+    $xpath = new DOMXPath($dom);
+    $elements = $xpath->query('//div[contains(@class, "css-901oao") and contains(@class, "r-a5wbuh") and contains(@class, "r-b88u0q") and contains(@class, "r-1ff274t")]');
+
+    // Ambil hanya satu elemen
+    if ($elements->length > 1) {
+        return $elements->item(1)->nodeValue; // Elemen pertama
+    } else {
+        return "Elemen <div> tidak ditemukan.";
+    }
+}
+
+
 if(isset($_POST['Login'])) {
     $id = $_POST['nama'];
     // Lakukan pembersihan atau validasi input $id sebelum digunakan dalam query SQL
@@ -58,6 +99,8 @@ $resultPulauBunaken = mysqli_query($conn, "SELECT deskripsi,jadwal FROM `tb_wisa
 $rowPulauBunaken = mysqli_fetch_assoc($resultPulauBunaken);
 $deskPulauBunaken = $rowPulauBunaken['deskripsi'];
 $jadwalPulauBunaken = $rowPulauBunaken['jadwal'];
+
+$scrapedPrice = scrapePrice();
 ?>
 
 
@@ -96,11 +139,13 @@ $jadwalPulauBunaken = $rowPulauBunaken['jadwal'];
                 <h1>Menyelami Keindahan <span>Indonesia</span></h1>
             </div>
             <div class="location-detail" id="Papua">
-                <h1>Raja Ampat</h1>
+                <h1>Raja Ampat (Korpak Villa &amp; Resort Raja Ampat)</h1>
                 <p><?php echo $deskRajaAmpat; ?></p>
                 <p>Jadwal: <?php echo $jadwalRajaAmpat; ?></p>
+                <p>harga dari traveloka: <?php echo $scrapedPrice; ?></p>
+                <p><a style="color: white;" href="https://www.traveloka.com/en-id/hotel/search?spec=23-12-2024.24-12-2024.1.1.HOTEL_GEO.107217.Raja%20Ampat%20Regency.1">Jika Tidak Percaya Boleh Di Check Sendiri</a></p>
                 <div class="location-img">
-                    <img src="./asset/papat.jpg" alt="">
+                    <img src="./asset/korpak.jpg" alt="">
                 </div>
                 <input type="submit" class="btn-order" onclick="setNama('100')" value="Pesan Sekarang! >>">
             </div>
