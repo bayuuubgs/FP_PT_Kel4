@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 }
 
 // Query untuk mendapatkan total jumlah untuk setiap nama_wisata
-$sql = "SELECT nama_wisata, SUM(jumlah) AS total_jumlah FROM tb_pesanan GROUP BY nama_wisata";
+$sql = "SELECT nama_wisata, count(jumlah) AS total_jumlah FROM tb_pesanan GROUP BY nama_wisata";
 $result = $conn->query($sql);
 
 $dataPoints = [];

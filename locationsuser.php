@@ -5,7 +5,7 @@ session_start();
 
 function scrapePrice() {
     // URL target
-    $url = "https://www.traveloka.com/en-id/hotel/search?spec=23-12-2024.24-12-2024.1.1.HOTEL_GEO.107217.Raja%20Ampat%20Regency.1"; // Ganti dengan URL yang valid
+    $url = "https://www.traveloka.com/en-id/hotel/search?spec=29-12-2024.30-12-2024.1.1.HOTEL_GEO.107121.Korpak%20Villa%20%26%20Resort%20Raja%20Ampat.1&hotelId=9000000687477"; // Ganti dengan URL yang valid
 
     // Inisialisasi cURL
     $ch = curl_init();
@@ -36,13 +36,12 @@ function scrapePrice() {
     $elements = $xpath->query('//div[contains(@class, "css-901oao") and contains(@class, "r-a5wbuh") and contains(@class, "r-b88u0q") and contains(@class, "r-1ff274t")]');
 
     // Ambil hanya satu elemen
-    if ($elements->length > 1) {
-        return $elements->item(1)->nodeValue; // Elemen pertama
+    if ($elements->length > 0) {
+        return $elements->item(0)->nodeValue; // Elemen pertama
     } else {
         return "Elemen <div> tidak ditemukan.";
     }
 }
-
 
 if(isset($_POST['Login'])) {
     $id = $_POST['nama'];
@@ -146,7 +145,7 @@ $scrapedPrice = scrapePrice();
                 <p><?php echo $deskRajaAmpat; ?></p>
                 <p>Jadwal: <?php echo $jadwalRajaAmpat; ?></p>
                 <p>harga dari traveloka: <?php echo $scrapedPrice; ?></p>
-                <p><a style="color: white;" href="https://www.traveloka.com/en-id/hotel/search?spec=23-12-2024.24-12-2024.1.1.HOTEL_GEO.107217.Raja%20Ampat%20Regency.1">Jika Tidak Percaya Boleh Di Check Sendiri</a></p>
+                <p><a style="color: white;" href="https://www.traveloka.com/en-id/hotel/search?spec=29-12-2024.30-12-2024.1.1.HOTEL_GEO.107121.Korpak%20Villa%20%26%20Resort%20Raja%20Ampat.1&hotelId=9000000687477">Jika Tidak Percaya Boleh Di Check Sendiri</a></p>
                 
                 <div class="container-maps">
                     <div class="location-img">
