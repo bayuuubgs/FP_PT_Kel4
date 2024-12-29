@@ -2,6 +2,7 @@
 include_once("koneksi.php");
 session_start();
 
+
 function scrapePrice() {
     // URL target
     $url = "https://www.traveloka.com/en-id/hotel/search?spec=23-12-2024.24-12-2024.1.1.HOTEL_GEO.107217.Raja%20Ampat%20Regency.1"; // Ganti dengan URL yang valid
