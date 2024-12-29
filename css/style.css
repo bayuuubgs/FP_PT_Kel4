@@ -50,6 +50,7 @@ nav{
     justify-content: space-between;
     padding-top: 0.3125rem;
     padding-bottom: 0.3125rem;
+    z-index: 1000;
 }
 
 nav .logo{
@@ -205,7 +206,7 @@ nav ul li a{
 .package-title h2{
     font-size: 40px;
     font-weight: 650;
-    padding-top: 75px;
+    padding-top: 100px;
     padding-bottom: 10px;
     line-height: 2;
 }
@@ -794,8 +795,8 @@ nav ul li a{
 }
 
 .location-img img{
-    height: 400px;
-    width: 400px;
+    height: 500px;
+    width: 500px;
     margin-top: 30px;
     margin-bottom: 30px;
     transition: ease 0.30s;
@@ -1201,4 +1202,21 @@ option {
 .popup-riwayat .btn-group .ri-btn:nth-child(1):hover {
     background: rgb(21, 74, 74);
     color: white;
+}
+#map, #map2, #map3, #map4, #map5, #map6, #map7, #map8 {
+    position: relative;
+    z-index: 1;
+    height: 480px;
+    width: 600px;
+}
+.map {
+    flex: 0;
+}
+.container-maps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }

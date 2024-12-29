@@ -120,6 +120,7 @@ $scrapedPrice = scrapePrice();
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet"
     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body class="location-body">
     <nav>
@@ -138,15 +139,40 @@ $scrapedPrice = scrapePrice();
             <div class="location-heading">
                 <h1>Menyelami Keindahan <span>Indonesia</span></h1>
             </div>
+            <!-- Raja Ampat -->
             <div class="location-detail" id="Papua">
                 <h1>Raja Ampat (Korpak Villa &amp; Resort Raja Ampat)</h1>
                 <p><?php echo $deskRajaAmpat; ?></p>
                 <p>Jadwal: <?php echo $jadwalRajaAmpat; ?></p>
                 <p>harga dari traveloka: <?php echo $scrapedPrice; ?></p>
                 <p><a style="color: white;" href="https://www.traveloka.com/en-id/hotel/search?spec=23-12-2024.24-12-2024.1.1.HOTEL_GEO.107217.Raja%20Ampat%20Regency.1">Jika Tidak Percaya Boleh Di Check Sendiri</a></p>
-                <div class="location-img">
-                    <img src="./asset/korpak.jpg" alt="">
+                
+                <div class="container-maps">
+                    <div class="location-img">
+                        <img src="./asset/korpak.jpg" alt="">
+                    </div>
+                    <div class="map">
+                        <div id="map"></div> <!-- ID peta pertama -->
+                    </div>
                 </div>
+
+                <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+                <script>
+                    // Pastikan peta diinisialisasi setelah DOM siap
+                    document.addEventListener("DOMContentLoaded", function() {
+                        var map = L.map('map').setView([-0.4377782187581854, 130.78384585057225], 17);
+                        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+                        attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+                        }).addTo(map);
+                        var marker = L.marker([-0.4377782187581854, 130.78384585057225]).addTo(map);
+                        marker.bindPopup("<b>Korpak Villa and Resort</b><br>Raja Ampat").openPopup();                    
+                        marker.on('click', function() {
+                            var googleMapsUrl = "https://maps.app.goo.gl/eUTWuCiySqT15Mh3A";
+                            window.open(googleMapsUrl, "_blank");
+                            marker.openPopup();
+                        });
+                    });
+                </script>
                 <input type="submit" class="btn-order" onclick="setNama('100')" value="Pesan Sekarang! >>">
             </div>
 
@@ -154,9 +180,29 @@ $scrapedPrice = scrapePrice();
                 <h1>Labuan Bajo</h1>
                 <p><?php echo $deskLabuanBajo; ?></p>
                 <p>Jadwal: <?php echo $jadwalLabuanBajo; ?></p>
-                <div class="location-img">
-                    <img src="./asset/labuan.jpg" alt="">
+                <div class="container-maps">
+                    <div class="location-img">
+                        <img src="./asset/labuan.jpg" alt="">
+                    </div>
+                    <div class="map">
+                        <div id="map2"></div>
+                    </div>
                 </div>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        var map2 = L.map('map2').setView([-8.500, 119.883], 14);
+                        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+                        attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+                        }).addTo(map2);
+                        var marker2 = L.marker([-8.500, 119.883]).addTo(map2);
+                        marker2.bindPopup("<b>Labuan Bajo</b><br>Nusa Tenggara Timur").openPopup();                    
+                        marker2.on('click', function() {
+                            var googleMapsUrl = "https://maps.app.goo.gl/GDsDsjbWGkkVsmiF9";
+                            window.open(googleMapsUrl, "_blank");
+                            marker2.openPopup();
+                        });
+                    });
+                </script>
                 <input type="submit" class="btn-order" onclick="setNama('101')" value="Pesan Sekarang! >>">
             </div>
 
@@ -164,9 +210,29 @@ $scrapedPrice = scrapePrice();
                 <h1>Danau Toba</h1>
                 <p><?php echo $deskDanauToba; ?></p>
                 <p>Jadwal: <?php echo $jadwalDanauToba; ?></p>
+                <div class="container-maps">
                 <div class="location-img">
                     <img src="./asset/tobi.jpg" alt="">
                 </div>
+                <div class="map">
+                        <div id="map3"></div>
+                    </div>
+                </div>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        var map3 = L.map('map3').setView([2.68, 98.88], 12);
+                         L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+                        attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+                        }).addTo(map3);
+                        var marker3 = L.marker([2.68, 98.88]).addTo(map3);
+                        marker3.bindPopup("<b>Danau Toba</b><br>Sumatera Utara").openPopup();                    
+                        marker3.on('click', function() {
+                            var googleMapsUrl = "https://maps.app.goo.gl/jrKRyJMUegwSXMqr7";
+                            window.open(googleMapsUrl, "_blank");
+                            marker3.openPopup();
+                        });
+                    });
+                </script>
                 <input type="submit" class="btn-order" onclick="setNama('102')" value="Pesan Sekarang! >>">
             </div>
 
@@ -174,9 +240,29 @@ $scrapedPrice = scrapePrice();
                 <h1>Pulau Merah</h1>
                 <p><?php echo $deskPulauMerah; ?></p>
                 <p>Jadwal: <?php echo $jadwalPulauMerah; ?></p>
+                <div class="container-maps">
                 <div class="location-img">
                     <img src="./asset/abang.jpg" alt="">
                 </div>
+                <div class="map">
+                        <div id="map4"></div>
+                    </div>
+                </div>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        var map4 = L.map('map4').setView([-8.5913913, 114.0166592], 14);
+                         L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+                        attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+                        }).addTo(map4);
+                        var marker4 = L.marker([-8.5913913, 114.0166592]).addTo(map4);
+                        marker4.bindPopup("<b>Pulau Merah</b><br>Banyuwangi").openPopup();                    
+                        marker4.on('click', function() {
+                            var googleMapsUrl = "https://maps.app.goo.gl/zdqHRw461a17smdNA";
+                            window.open(googleMapsUrl, "_blank");
+                            marker4.openPopup();
+                        });
+                    });
+                </script>
                 <input type="submit" class="btn-order" onclick="setNama('103')" value="Pesan Sekarang! >>">
             </div>
 
@@ -184,9 +270,29 @@ $scrapedPrice = scrapePrice();
                 <h1>Nusa Penida</h1>
                 <p><?php echo $deskNusaPenida; ?></p>
                 <p>Jadwal: <?php echo $jadwalNusaPenida; ?></p>
+                <div class="container-maps">
                 <div class="location-img">
                     <img src="./asset/penida.jpg" alt="">
                 </div>
+                <div class="map">
+                        <div id="map5"></div>
+                    </div>
+                </div>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        var map5 = L.map('map5').setView([-8.745573, 115.5376405], 13);
+                         L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+                        attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+                        }).addTo(map5);
+                        var marker5 = L.marker([-8.745573, 115.5376405]).addTo(map5);
+                        marker5.bindPopup("<b>Nusa Penida</b><br>Bali").openPopup();                    
+                        marker5.on('click', function() {
+                            var googleMapsUrl = "https://maps.app.goo.gl/aonmk2M7QQG5GG8U7";
+                            window.open(googleMapsUrl, "_blank");
+                            marker5.openPopup();
+                        });
+                    });
+                </script>
                 <input type="submit" class="btn-order" onclick="setNama('104')" value="Pesan Sekarang! >>">
             </div>
 
@@ -194,9 +300,29 @@ $scrapedPrice = scrapePrice();
                 <h1>Banda Neira</h1>
                 <p><?php echo $deskBandaNeira; ?></p>
                 <p>Jadwal: <?php echo $jadwalBandaNeira; ?></p>
+                <div class="container-maps">
                 <div class="location-img">
                     <img src="./asset/bandar.jpg" alt="">
                 </div>
+                <div class="map">
+                        <div id="map6"></div>
+                    </div>
+                </div>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        var map6 = L.map('map6').setView([-4.5179019, 129.90406], 14);
+                         L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+                        attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+                        }).addTo(map6);
+                        var marker6 = L.marker([-4.5179019, 129.90406]).addTo(map6);
+                        marker6.bindPopup("<b>Banda Neira</b><br>Maluku").openPopup();                    
+                        marker6.on('click', function() {
+                            var googleMapsUrl = "https://maps.app.goo.gl/j3QoeWdkXQVB4DMa6";
+                            window.open(googleMapsUrl, "_blank");
+                            marker6.openPopup();
+                        });
+                    });
+                </script>
                 <input type="submit" class="btn-order" onclick="setNama('105')" value="Pesan Sekarang! >>">
             </div>
 
@@ -204,9 +330,29 @@ $scrapedPrice = scrapePrice();
                 <h1>Pulau Derawan</h1>
                 <p><?php echo $deskPulauDerawan; ?></p>
                 <p>Jadwal: <?php echo $jadwalPulauDerawan; ?></p>
+                <div class="container-maps">
                 <div class="location-img">
                     <img src="./asset/dera.jpg" alt="">
                 </div>
+                <div class="map">
+                        <div id="map7"></div>
+                    </div>
+                </div>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        var map7 = L.map('map7').setView([2.2248743, 118.4634242], 11);
+                         L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+                        attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+                        }).addTo(map7);
+                        var marker7 = L.marker([2.2248743, 118.4634242]).addTo(map7);
+                        marker7.bindPopup("<b>Pulau Derawan</b><br>Kalimantan Timur").openPopup();                    
+                        marker7.on('click', function() {
+                            var googleMapsUrl = "https://maps.app.goo.gl/6i3fTQ4ysfLEBAFx8";
+                            window.open(googleMapsUrl, "_blank");
+                            marker7.openPopup();
+                        });
+                    });
+                </script>
                 <input type="submit" class="btn-order" onclick="setNama('106')" value="Pesan Sekarang! >>">
             </div>
 
@@ -214,9 +360,29 @@ $scrapedPrice = scrapePrice();
                 <h1>Pulau Bunaken</h1>
                 <p><?php echo $deskPulauBunaken; ?></p>
                 <p>Jadwal: <?php echo $jadwalPulauBunaken; ?></p>
+                <div class="container-maps">
                 <div class="location-img">
                     <img src="./asset/buna.jpg" alt="">
                 </div>
+                <div class="map">
+                        <div id="map8"></div>
+                    </div>
+                </div>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        var map8 = L.map('map8').setView([1.618987, 124.766183], 15);
+                         L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+                        attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+                        }).addTo(map8);
+                        var marker8 = L.marker([1.618987, 124.766183]).addTo(map8);
+                        marker8.bindPopup("<b>Pulau Bunaken</b><br>Sulawesi Utara").openPopup();                    
+                        marker8.on('click', function() {
+                            var googleMapsUrl = "https://maps.app.goo.gl/Qv3D7mYuXEQ4dpEW8";
+                            window.open(googleMapsUrl, "_blank");
+                            marker8.openPopup();
+                        });
+                    });
+                </script>
                 <input type="submit" class="btn-order" onclick="setNama('107')" value="Pesan Sekarang! >>">
             </div>
             <input type="hidden" name="nama" id="nama_input">
@@ -258,3 +424,4 @@ $scrapedPrice = scrapePrice();
     </script>
 </body>
 </html>
+
